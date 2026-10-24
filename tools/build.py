@@ -294,7 +294,7 @@ controllers.</p>
 <p><b>No ads. No in-app purchases. No account.</b></p>""",
     kids=False, products=[],
 )
-NMT_UPDATED = "24 October 2026"
+NMT_UPDATED = "25 October 2026"
 
 
 def nmt_privacy(g):
@@ -305,14 +305,23 @@ def nmt_privacy(g):
 <p>This policy explains how the game <b>{escape(n)}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER}
 (&ldquo;we&rdquo;, &ldquo;us&rdquo;), handles information. It applies to the game on iPhone, iPad and Mac.</p>
 
-<div class="card"><b>In short: the game collects no data.</b> It has no ads, no in-app purchases, no accounts, no analytics
-and no tracking, and it does not connect to the internet. Your progress is stored only on your device.</div>
+<div class="card"><b>In short: we collect no data.</b> The game has no ads, no in-app purchases, no accounts, no analytics and
+no tracking. Your progress is stored on your device and, if you use iCloud, in your own iCloud account; achievements go
+to Apple's Game Center. We never receive any of it.</div>
 
 <h2>Information stored on your device</h2>
-<p>Your restaurant progress, coins, chosen chef and settings (music and effects volume, haptics, reduced motion) are saved
-in the game's own storage on your device. They are never sent to us or to anyone else. Deleting the game deletes this
-data. If your device backs up apps (for example iCloud Backup), that backup is handled by Apple under Apple's privacy
+<p>Your restaurant progress, coins, chosen chef and settings (music, effects and ambience volume, haptics, reduced motion)
+are saved in the game's own storage on your device. They are never sent to us. Deleting the game deletes this copy (your
+iCloud copy, if any, stays in your iCloud until you reset the game or remove it in iCloud settings). If your device backs up apps (for example iCloud Backup), that backup is handled by Apple under Apple's privacy
 policy; we cannot access it.</p>
+
+<h2>iCloud and Game Center (Apple)</h2>
+<p>If you are signed in to iCloud, a copy of your game save is kept in <b>your own iCloud account</b> (Apple's iCloud
+key-value storage) so you can continue after reinstalling or on your other Apple devices. If you use Game Center, your
+achievements and your best-day score are shared with Game Center. Both are Apple services, handled under
+<a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>; we cannot see or access this data. You can turn them
+off in your device's Settings (iCloud, Game Center), and <b>Settings &rarr; Progress &rarr; Reset</b> in the game erases your
+restaurant on all your devices.</p>
 
 <h2>Information we do not collect</h2>
 <p>We do not collect, receive or store any personal or usage information: no name, email address, phone number,
@@ -388,9 +397,18 @@ is always the best next step.</p>
 <p>Connect up to four game controllers to your iPhone, iPad or Mac, then choose the number of chefs in <b>Settings &rarr;
 Local chefs</b>.</p>
 <h3>Is my progress saved?</h3>
-<p>Yes, automatically, on your device. Progress is not shared between devices.</p>
+<p>Yes, automatically. If you are signed in to iCloud, your restaurant is also kept in your iCloud, so after reinstalling
+or on a new iPhone, iPad or Mac with the same Apple ID the game continues where you left off. <b>Settings &rarr; Progress</b>
+shows where it is saved.</p>
+<h3>My progress didn't come back after reinstalling.</h3>
+<p>Check that you are signed in to iCloud with the same Apple ID and that iCloud is allowed for apps (Settings &rarr; [your
+name] &rarr; iCloud). Open the game, wait a few seconds on the main menu, and it restores automatically. Still missing?
+Email us with your device model.</p>
 <h3>How do I start over?</h3>
-<p>Delete and reinstall the game. This removes all progress.</p>
+<p>Tap <b>New game</b> on the main menu, or <b>Settings &rarr; Progress &rarr; Reset</b>. This erases your restaurant on all your
+devices that share the same iCloud account.</p>
+<h3>Achievements and leaderboard</h3>
+<p>Sign in to Game Center in your device's Settings to earn achievements and post your best day's sales.</p>
 <h3>Are there ads or purchases?</h3>
 <p>No. The game has no ads and no in-app purchases.</p>
 <h3>The game feels slow or my device is warm.</h3>
