@@ -305,9 +305,11 @@ def nmt_privacy(g):
 <p>This policy explains how the game <b>{escape(n)}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER}
 (&ldquo;we&rdquo;, &ldquo;us&rdquo;), handles information. It applies to the game on iPhone, iPad and Mac.</p>
 
-<div class="card"><b>In short: we collect no data.</b> The game has no ads, no in-app purchases, no accounts, no analytics and
-no tracking. Your progress is stored on your device and, if you use iCloud, in your own iCloud account; achievements go
-to Apple's Game Center. We never receive any of it.</div>
+<div class="card"><b>In short:</b> no ads in the game, no in-app purchases, no accounts and no tracking across other companies'
+apps. Your progress is stored on your device and, if you use iCloud, in your own iCloud account; achievements go to Apple's
+Game Center. With your permission (asked first in the EEA, UK and Switzerland; on by default elsewhere and switchable off in
+<b>Settings &rarr; Analytics</b>) we use <b>Google Analytics for Firebase</b> to count installs and see how the game is played,
+so we can improve it and measure our own advertising. It never identifies you personally.</div>
 
 <h2>Information stored on your device</h2>
 <p>Your restaurant progress, coins, chosen chef and settings (music, effects and ambience volume, haptics, reduced motion)
@@ -323,11 +325,31 @@ achievements and your best-day score are shared with Game Center. Both are Apple
 off in your device's Settings (iCloud, Game Center), and <b>Settings &rarr; Progress &rarr; Reset</b> in the game erases your
 restaurant on all your devices.</p>
 
+<h2>Analytics (Google Analytics for Firebase)</h2>
+<p>To understand how many people play, where new players get stuck and which of our ads on Google bring new players, the
+game uses Google Analytics for Firebase, provided by Google. When analytics is allowed it receives:</p>
+<ul>
+<li>an app-instance identifier created by Firebase (not your name, email, Apple ID or the advertising identifier);</li>
+<li>device and app information: device model, iOS version, app version, language, country/region (derived from your IP
+address, which Google does not store as such), first-open and session times;</li>
+<li>game events: tutorial steps completed, restaurant level reached, rooms, cookers, crew and upgrades bought, days
+closed and their sales total, "new game" and iCloud restores.</li>
+</ul>
+<p>We use this only to improve the game and to measure our own advertising campaigns (for example, how many installs an
+ad brought). It is <b>not</b> used for personalised advertising, is not combined with data from other companies' apps or
+websites, and the game never asks for or uses the advertising identifier (IDFA), so it does not "track" you as Apple
+defines it. Google processes this data under its own policy:
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its
+services</a>, and retains it for up to 14 months (our setting).</p>
+<ul>
+<li><b>EEA, UK and Switzerland:</b> nothing is collected until you choose <b>Allow</b> on the one-time privacy card.</li>
+<li><b>Everywhere:</b> turn it off any time in <b>Settings &rarr; Analytics</b>. Analytics stops on that device.</li>
+</ul>
+
 <h2>Information we do not collect</h2>
-<p>We do not collect, receive or store any personal or usage information: no name, email address, phone number,
-contacts, photos, location, identifiers, purchase history, diagnostics or gameplay data. The game contains no
-advertising, analytics or tracking software, never asks for Apple's tracking permission, and we do not sell or share
-any information.</p>
+<p>We do not collect your name, email address, phone number, contacts, photos, precise location, health data,
+browsing history or purchase details. There is no advertising inside the game and we do not sell or share personal
+information for cross-context behavioural advertising.</p>
 
 <h2>Controllers and local multiplayer</h2>
 <p>Local co-op uses game controllers connected to your device. Controller input is used only to play and is not stored
@@ -338,11 +360,16 @@ or transmitted.</p>
 emails when they are no longer needed.</p>
 
 <h2>Children</h2>
-<p>The game is suitable for all ages and collects no information from anyone, including children.</p>
+<p>The game is suitable for all ages but is not directed at children under 13. Analytics collects no personal information;
+if you believe a child has sent us personal information (for example by email), contact us and we will delete it.</p>
 
 <h2>Your rights</h2>
-<p>Because we hold no information about you, there is nothing for us to access, correct or delete. You can remove all game
-data yourself by deleting the game. For any question, email <a href="mailto:{EMAIL}">{EMAIL}</a>; we answer within 30 days.</p>
+<p>Depending on where you live (for example under the GDPR, UK GDPR, CCPA/CPRA or India's DPDP Act) you may have the right to
+access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. You can
+withdraw analytics consent at any time in <b>Settings &rarr; Analytics</b>, reset your game in <b>Settings &rarr; Progress &rarr;
+Reset</b>, or delete the game. Analytics data is not linked to your identity, so to ask Google to delete it, email us the
+approximate date you played and your device model and we will request deletion of that app instance. Email
+<a href="mailto:{EMAIL}">{EMAIL}</a>; we answer within 30 days. You may also complain to your local data-protection authority.</p>
 
 <h2>Changes</h2>
 <p>If a future version changes how information is handled, we will update this page and the date above before that version
@@ -411,6 +438,8 @@ devices that share the same iCloud account.</p>
 <p>Sign in to Game Center in your device's Settings to earn achievements and post your best day's sales.</p>
 <h3>Are there ads or purchases?</h3>
 <p>No. The game has no ads and no in-app purchases.</p>
+<h3>How do I turn analytics off?</h3>
+<p>Open <b>Settings &rarr; Analytics</b> and switch it off. Details are in the <a href="/{g['slug']}/privacy.html">Privacy Policy</a>.</p>
 <h3>The game feels slow or my device is warm.</h3>
 <p>The game adjusts its resolution automatically to keep running smoothly. Closing other apps and turning on
 <b>Settings &rarr; Reduced motion</b> also helps.</p>
