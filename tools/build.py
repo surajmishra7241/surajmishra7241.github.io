@@ -284,10 +284,127 @@ def home(games):
     page("index.html", f"{DEVELOPER} Games", body)
 
 
+NIGHTMARKET = dict(
+    slug="nightmarkettycoon", name="Night Market Tycoon",
+    tagline="Turn one glowing street stall into the busiest night-market food empire in Saffron Bay.",
+    about="""<p>Cook street noodles, tomato soup, steamed dumplings and festival skewers, carry towering stacks to the
+counter, collect the cash and build your tiny Ember Stall into a bustling lantern-lit restaurant. Hire crew, open new
+rooms, upgrade your cookers and keep the queue happy. Play alone or with up to four friends on one device with
+controllers.</p>
+<p><b>No ads. No in-app purchases. No account.</b></p>""",
+    kids=False, products=[],
+)
+NMT_UPDATED = "24 October 2026"
+
+
+def nmt_privacy(g):
+    n = g["name"]
+    body = f"""
+<h1>{escape(n)} &mdash; Privacy Policy</h1>
+<p class="meta">Last updated: {NMT_UPDATED}</p>
+<p>This policy explains how the game <b>{escape(n)}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER}
+(&ldquo;we&rdquo;, &ldquo;us&rdquo;), handles information. It applies to the game on iPhone, iPad and Mac.</p>
+
+<div class="card"><b>In short: the game collects no data.</b> It has no ads, no in-app purchases, no accounts, no analytics
+and no tracking, and it does not connect to the internet. Your progress is stored only on your device.</div>
+
+<h2>Information stored on your device</h2>
+<p>Your restaurant progress, coins, chosen chef and settings (music and effects volume, haptics, reduced motion) are saved
+in the game's own storage on your device. They are never sent to us or to anyone else. Deleting the game deletes this
+data. If your device backs up apps (for example iCloud Backup), that backup is handled by Apple under Apple's privacy
+policy; we cannot access it.</p>
+
+<h2>Information we do not collect</h2>
+<p>We do not collect, receive or store any personal or usage information: no name, email address, phone number,
+contacts, photos, location, identifiers, purchase history, diagnostics or gameplay data. The game contains no
+advertising, analytics or tracking software, never asks for Apple's tracking permission, and we do not sell or share
+any information.</p>
+
+<h2>Controllers and local multiplayer</h2>
+<p>Local co-op uses game controllers connected to your device. Controller input is used only to play and is not stored
+or transmitted.</p>
+
+<h2>Contacting support</h2>
+<p>If you email us, we receive your email address and whatever you write, and use it only to answer you. We delete support
+emails when they are no longer needed.</p>
+
+<h2>Children</h2>
+<p>The game is suitable for all ages and collects no information from anyone, including children.</p>
+
+<h2>Your rights</h2>
+<p>Because we hold no information about you, there is nothing for us to access, correct or delete. You can remove all game
+data yourself by deleting the game. For any question, email <a href="mailto:{EMAIL}">{EMAIL}</a>; we answer within 30 days.</p>
+
+<h2>Changes</h2>
+<p>If a future version changes how information is handled, we will update this page and the date above before that version
+is released.</p>
+
+<h2>Contact</h2>
+<p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+"""
+    page(f"{g['slug']}/privacy.html", f"{n} Privacy Policy", body, g)
+
+
+def nmt_terms(g):
+    n = g["name"]
+    body = f"""
+<h1>{escape(n)} &mdash; Terms of Use</h1>
+<p class="meta">Last updated: {NMT_UPDATED}</p>
+<p>These terms apply to the game <b>{escape(n)}</b> published by {DEVELOPER}. If you downloaded the game from the Apple App
+Store, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User
+License Agreement</a> also applies; if anything here conflicts with it, Apple's agreement wins for the App Store version.</p>
+<h2>Licence</h2>
+<p>We give you a personal, non-transferable, revocable licence to download and play the game for non-commercial purposes.
+Do not copy, modify, reverse engineer, resell or exploit the game.</p>
+<h2>Purchases</h2>
+<p>The game contains no ads and no in-app purchases. Coins earned in the game are a virtual reward with no cash value.</p>
+<h2>Availability and changes</h2>
+<p>We may update the game or change its content. To the extent the law allows, the game is provided &ldquo;as is&rdquo; and we
+are not liable for indirect or consequential losses. Nothing in these terms limits rights you have under consumer-protection
+law.</p>
+<h2>Credits</h2>
+<p>The game uses third-party assets released under CC0 and the SIL Open Font License (Poly Haven, Kenney, BigSoundBank,
+OpenGameArt, Google Fonts); full credits are in the game.</p>
+<h2>Privacy</h2>
+<p>See the <a href="/{g['slug']}/privacy.html">{escape(n)} Privacy Policy</a>.</p>
+<h2>Contact</h2>
+<p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+"""
+    page(f"{g['slug']}/terms.html", f"{n} Terms of Use", body, g)
+
+
+def nmt_support(g):
+    n = g["name"]
+    body = f"""
+<h1>{escape(n)} Support</h1>
+<p class="lead">Need help? Email <a href="mailto:{EMAIL}?subject={escape(n)}%20support">{EMAIL}</a>. We usually reply within
+two working days. Please include your device model and what happened.</p>
+<h2>Frequently asked questions</h2>
+<h3>How do I play?</h3>
+<p>Drag anywhere on the screen to walk (or use a controller). Everything else happens when you walk up to it: stand at a
+cooker to pick up food, at the counter to serve, near cash to collect it, and on a glowing pad to build. The brightest pad
+is always the best next step.</p>
+<h3>How do I play with friends?</h3>
+<p>Connect up to four game controllers to your iPhone, iPad or Mac, then choose the number of chefs in <b>Settings &rarr;
+Local chefs</b>.</p>
+<h3>Is my progress saved?</h3>
+<p>Yes, automatically, on your device. Progress is not shared between devices.</p>
+<h3>How do I start over?</h3>
+<p>Delete and reinstall the game. This removes all progress.</p>
+<h3>Are there ads or purchases?</h3>
+<p>No. The game has no ads and no in-app purchases.</p>
+<h3>The game feels slow or my device is warm.</h3>
+<p>The game adjusts its resolution automatically to keep running smoothly. Closing other apps and turning on
+<b>Settings &rarr; Reduced motion</b> also helps.</p>
+"""
+    page(f"{g['slug']}/support.html", f"{n} Support", body, g)
+
+
 games = [TUMBLEPALS, SPINANDCARVE]
 for g in games:
     privacy(g); terms(g); support(g); landing(g)
-home(games)
+nmt_privacy(NIGHTMARKET); nmt_terms(NIGHTMARKET); nmt_support(NIGHTMARKET); landing(NIGHTMARKET)
+home(games + [NIGHTMARKET])
 (ROOT / "app-ads.txt").write_text("google.com, pub-1369340241981817, DIRECT, f08c47fec0942fa0\n")
 (ROOT / ".nojekyll").write_text("")
 (ROOT / "404.html").write_text('<!doctype html><meta charset="utf-8"><title>Not found</title><p>Page not found. <a href="/">Home</a></p>\n')
