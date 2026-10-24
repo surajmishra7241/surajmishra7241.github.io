@@ -340,7 +340,7 @@ ad brought). It is <b>not</b> used for personalised advertising, is not combined
 websites, and the game never asks for or uses the advertising identifier (IDFA), so it does not "track" you as Apple
 defines it. Google processes this data under its own policy:
 <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its
-services</a>, and retains it for up to 14 months (our setting).</p>
+services</a>, and keeps detailed event data for 2 months (the Google Analytics default; reports use aggregated counts).</p>
 <ul>
 <li><b>EEA, UK and Switzerland:</b> nothing is collected until you choose <b>Allow</b> on the one-time privacy card.</li>
 <li><b>Everywhere:</b> turn it off any time in <b>Settings &rarr; Analytics</b>. Analytics stops on that device.</li>
