@@ -447,11 +447,138 @@ devices that share the same iCloud account.</p>
     page(f"{g['slug']}/support.html", f"{n} Support", body, g)
 
 
+FAIRWAY = dict(
+    slug="fairwayshowdown", name="Fairway Showdown",
+    tagline="Head-to-head tour golf with one thumb. Beat named rivals, win championships, dress your golfer.",
+    about="""<p>Read the wind, pick the club, set the spin and stop the needle in the gold. Play match play against named
+rivals across four tours, fight through championships of 64 golfers, and try seven special events including The Bogey Run.
+Four courses: parkland, desert, clifftop links and volcanic islands. Five golfers with their own strengths, and clubs,
+balls, bags and clothes to earn by playing.</p>
+<p><b>One price. No ads. No in-app purchases. No account. Plays offline.</b></p>""",
+    kids=False, products=[],
+)
+FS_UPDATED = "3 November 2026"
+
+
+def fs_privacy(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} &mdash; Privacy Policy</h1>
+<p class="meta">Last updated: {FS_UPDATED}</p>
+<p>This policy covers the game <b>{n}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER} (&ldquo;we&rdquo;, &ldquo;us&rdquo;),
+on iPhone.</p>
+
+<div class="card"><b>In short: the game collects nothing.</b> It has no account, no ads, no analytics, no tracking and no
+in-app purchases, and it does not connect to any server of ours or anyone else's. Everything you do in the game stays on
+your device.</div>
+
+<h2>Information stored on your device</h2>
+<p>Your progress (golfers, clubs, clothes, coins and gems earned in play, tour results, trophies, records) and your settings
+are saved in a file inside the game's own storage on your device. We cannot see it. It is included in your device's own
+backups if you have them turned on, under Apple's terms. Deleting the game deletes this data.</p>
+
+<h2>Information we collect</h2>
+<p>None. The game does not collect, transmit, sell or share any personal data or usage data. It contains no third-party
+SDKs for advertising, analytics, crash reporting or attribution, does not use the advertising identifier and never shows
+Apple's tracking permission prompt.</p>
+
+<h2>Apple services</h2>
+<p>The game may ask Apple to show its standard &ldquo;rate this app&rdquo; prompt after you win a championship. That prompt
+is run by Apple; we receive no information from it. Downloading and paying for the game is handled by Apple under
+<a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. Apple may give us anonymous, aggregated download
+and crash statistics through App Store Connect if you have chosen to share them with developers in your device settings.</p>
+
+<h2>Sharing a result</h2>
+<p>If you tap <b>Share</b> after a match, the game opens your device's share sheet with a short text of your result. Nothing
+is sent unless you choose where to send it.</p>
+
+<h2>Children</h2>
+<p>{n} is made for a general audience and is not directed at children under 13. Because the game collects no personal
+information from anyone, it collects none from children.</p>
+
+<h2>Your rights</h2>
+<p>Because we hold no data about you, there is nothing for us to access, correct or delete. To erase your progress, delete
+the game from your device. Questions are welcome at <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+
+<h2>Changes</h2>
+<p>If the game ever starts collecting any data, we will update this policy and the App Store privacy details first.</p>
+
+<h2>Contact</h2>
+<p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+"""
+    page(f"{g['slug']}/privacy.html", f"{g['name']} Privacy Policy", body, g)
+
+
+def fs_terms(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} &mdash; Terms of Use</h1>
+<p class="meta">Last updated: {FS_UPDATED}</p>
+<p>These terms apply to the game <b>{n}</b> published by {DEVELOPER}. Apple's
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License
+Agreement</a> also applies; if anything here conflicts with it, Apple's agreement wins.</p>
+<h2>Licence</h2>
+<p>We give you a personal, non-transferable, revocable licence to play the game for non-commercial purposes. Do not copy,
+modify, reverse engineer, resell or exploit the game.</p>
+<h2>Price and purchases</h2>
+<p>The game is bought once from the App Store. It has no ads and no in-app purchases. Coins and gems are earned only by
+playing, have no cash value and cannot be bought, sold or exchanged.</p>
+<h2>Names</h2>
+<p>All golfers, rivals, tours, courses, events and equipment in the game are fictional. Any resemblance to real people,
+tournaments or brands is coincidental.</p>
+<h2>Availability and changes</h2>
+<p>We may update the game or change its content. To the extent the law allows, the game is provided &ldquo;as is&rdquo; and we
+are not liable for indirect or consequential losses. Nothing in these terms limits rights you have under consumer-protection
+law.</p>
+<h2>Credits</h2>
+<p>The game uses third-party assets released under CC0 and the SIL Open Font License (Quaternius, ambientCG, Poly Haven,
+Kenney, Google Fonts and others); full credits are in the game under Settings.</p>
+<h2>Privacy</h2>
+<p>See the <a href="/{g['slug']}/privacy.html">{n} Privacy Policy</a>.</p>
+<h2>Contact</h2>
+<p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+"""
+    page(f"{g['slug']}/terms.html", f"{g['name']} Terms of Use", body, g)
+
+
+def fs_support(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} Support</h1>
+<p class="lead">Need help? Email <a href="mailto:{EMAIL}?subject=Fairway%20Showdown%20support">{EMAIL}</a>. We usually reply
+within two working days. Please include your iPhone model and what happened.</p>
+<h2>Frequently asked questions</h2>
+<h3>How do I hit a shot?</h3>
+<p>Drag to aim and set the distance (a faint blue line shows where the wind will take the ball), choose a club and spin,
+then hold the swing button and let go with the needle in the gold zone. The white centre is a flush strike. On the green, the drifting marks show the
+slope: aim above the hole on a break.</p>
+<h3>Which golfer is mine?</h3>
+<p>Yours is always marked in teal, with a YOU tag and a teal ring at its feet; your rival is always coral. The card at the top
+of the screen says whose shot it is.</p>
+<h3>How do I change my golfer's clothes?</h3>
+<p>Open <b>Golfers</b>, pick a golfer you own and tap <b>Wardrobe</b>. Clothes are bought with coins or gems earned by playing
+and change looks only, never stats.</p>
+<h3>There is no sound.</h3>
+<p>Turn up the volume with the side buttons while the game is open, and check <b>Settings &rarr; Music</b> and
+<b>Sound effects</b> in the game. The game plays even with the ring switch on silent.</p>
+<h3>Is my progress saved?</h3>
+<p>Yes, automatically, on your iPhone. It is not stored online, so deleting the game deletes your progress.</p>
+<h3>Are there ads or purchases?</h3>
+<p>No. You buy the game once; there are no ads and no in-app purchases.</p>
+<h3>How do I get a refund?</h3>
+<p>Request it from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+<h3>Privacy</h3>
+<p>The game collects nothing. See the <a href="/{g['slug']}/privacy.html">Privacy Policy</a>.</p>
+"""
+    page(f"{g['slug']}/support.html", f"{g['name']} Support", body, g)
+
+
 games = [TUMBLEPALS, SPINANDCARVE]
 for g in games:
     privacy(g); terms(g); support(g); landing(g)
 nmt_privacy(NIGHTMARKET); nmt_terms(NIGHTMARKET); nmt_support(NIGHTMARKET); landing(NIGHTMARKET)
-home(games + [NIGHTMARKET])
+fs_privacy(FAIRWAY); fs_terms(FAIRWAY); fs_support(FAIRWAY); landing(FAIRWAY)
+home(games + [NIGHTMARKET, FAIRWAY])
 (ROOT / "app-ads.txt").write_text("google.com, pub-1369340241981817, DIRECT, f08c47fec0942fa0\n")
 (ROOT / ".nojekyll").write_text("")
 (ROOT / "404.html").write_text('<!doctype html><meta charset="utf-8"><title>Not found</title><p>Page not found. <a href="/">Home</a></p>\n')
