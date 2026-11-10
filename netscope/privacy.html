@@ -20,7 +20,7 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;color:var(--muted
 <main>
 
 <h1>NetScope &mdash; Privacy Policy</h1>
-<p class="meta">Last updated: 9 November 2026</p>
+<p class="meta">Last updated: 10 November 2026</p>
 <p>This policy covers <b>NetScope</b> for iPhone, iPad and Mac (&ldquo;the app&rdquo;), published by Suraj Mishra (&ldquo;we&rdquo;, &ldquo;us&rdquo;).</p>
 <div class="card"><b>In short: NetScope collects nothing.</b> It has no account, no ads, no analytics, no tracking and no server of ours. Results stay on your device. The app only contacts the network when you run a tool &mdash; that is what a network tool does &mdash; and only the destinations listed below.</div>
 
@@ -29,19 +29,19 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;color:var(--muted
 <table>
 <tr><th>Destination</th><th>When</th></tr>
 <tr><td>Hosts, domains, IP addresses and URLs <b>you enter</b></td><td>When you run DNS, ping, traceroute, HTTP/TLS, port scan, TCP client, TLS, email or WHOIS tools</td></tr>
-<tr><td>Devices on your local network, including your router</td><td>When you run LAN discovery or the Network Security Check (router: Telnet, FTP, TR-069 and web-admin ports only)</td></tr>
+<tr><td>Devices on your local network, including your router</td><td>When you run LAN discovery or the Wi-Fi Safety Check (router: Telnet, FTP, TR-069 and web-admin ports only)</td></tr>
 <tr><td>Public DNS resolvers: Cloudflare, Google, Quad9, OpenDNS</td><td>When you choose one, run the resolver benchmark or DNS propagation</td></tr>
-<tr><td>Cloudflare (1.1.1.1 trace endpoint)</td><td>Only when you tap &ldquo;Look Up&rdquo; to see your public IP</td></tr>
+<tr><td>Cloudflare (1.1.1.1 trace endpoint)</td><td>When you tap &ldquo;Look Up&rdquo; to see your public IP, and during a Proxy Safety Check (once directly and once through your proxy, to compare the two addresses)</td></tr>
 <tr><td>Cloudflare speed endpoint</td><td>Only when you run a speed test</td></tr>
 <tr><td>rdap.org and the registries it points to</td><td>When you run WHOIS / RDAP</td></tr>
-<tr><td>www.apple.com, www.wikipedia.org, captive.apple.com, one.one.one.one</td><td>During the Network Security Check, to test HTTPS interception, DNS and captive portals</td></tr>
-<tr><td>Proxy servers, subscription URLs and rule-set URLs <b>you add</b></td><td>When you import or test them</td></tr>
+<tr><td>www.apple.com, www.wikipedia.org, captive.apple.com, one.one.one.one</td><td>During the Wi-Fi Safety Check, to test HTTPS interception, DNS and captive portals</td></tr>
+<tr><td>Proxy servers, subscription URLs and rule-set URLs <b>you add</b></td><td>When you import or test them. A Proxy Safety Check sends requests to one.one.one.one through the proxy you choose</td></tr>
 </table>
 <p>Like any website, these services see your IP address when contacted. We receive nothing from them.</p>
 
 <h2>Information stored on your device</h2>
 <ul>
-<li><b>History, saved hosts, workflows, certificate watchlist, network snapshots, proxy profiles and rules</b> are stored in the app's private storage. You can turn history off or clear it in Settings. Deleting the app deletes this data.</li>
+<li><b>History, saved hosts, workflows, certificate watchlist, network snapshots, remembered Wi-Fi networks (a name you choose plus the router address, certificate roots, DNS answers and open router ports seen when you saved it), proxy profiles and rules</b> are stored in the app's private storage. You can turn history off or clear it in Settings. Deleting the app deletes this data.</li>
 <li><b>Proxy passwords and user IDs</b> are stored only in the iOS/macOS Keychain on this device, are excluded from backups and device transfer, and are never included in exports, history or logs.</li>
 <li><b>Certificate reminders</b> are scheduled as local notifications on your device.</li>
 </ul>
@@ -53,7 +53,7 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;color:var(--muted
 <p>None. The app contains no SDKs for advertising, analytics, crash reporting or attribution, does not use the advertising identifier and never shows Apple's tracking prompt. Its only other code is Apple's own open-source swift-certificates, swift-asn1 and swift-crypto libraries, used to decode certificates on the device; we check them against the public vulnerability database before every release. App Store privacy label: <b>Data Not Collected</b>.</p>
 
 <h2>VPN and proxies</h2>
-<p>NetScope does not run a VPN and does not route other apps' traffic. It stores, imports and tests proxy profiles you provide.</p>
+<p>NetScope does not run a VPN and does not route other apps' traffic. It stores, imports and safety-checks proxy profiles you provide, and can export your rules as a PAC file or Clash rules for use in other software.</p>
 
 <h2>Apple services</h2>
 <p>Downloading and paying for the app is handled by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. If you have chosen to share analytics with developers in your device settings, Apple may give us anonymous, aggregated crash and usage statistics.</p>
