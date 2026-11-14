@@ -291,25 +291,29 @@ NIGHTMARKET = dict(
 counter, collect the cash and build your tiny Ember Stall into a bustling lantern-lit restaurant. Hire crew, open new
 rooms, upgrade your cookers and keep the queue happy. Play alone or with up to four friends on one device with
 controllers.</p>
-<p><b>No ads. No in-app purchases. No account.</b></p>""",
+<p><b>Free to play. Works offline. Local co-op. No account.</b></p>""",
     kids=False, products=[],
 )
 NMT_UPDATED = "25 October 2026"
+NMT_PRIVACY_UPDATED = "14 November 2026"   # ads, purchases, age question, tracking prompt (version 1.2)
 
 
 def nmt_privacy(g):
     n = g["name"]
     body = f"""
 <h1>{escape(n)} &mdash; Privacy Policy</h1>
-<p class="meta">Last updated: {NMT_UPDATED}</p>
+<p class="meta">Last updated: {NMT_PRIVACY_UPDATED}</p>
 <p>This policy explains how the game <b>{escape(n)}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER}
 (&ldquo;we&rdquo;, &ldquo;us&rdquo;), handles information. It applies to the game on iPhone, iPad and Mac.</p>
 
-<div class="card"><b>In short:</b> no ads in the game, no in-app purchases, no accounts and no tracking across other companies'
-apps. Your progress is stored on your device and, if you use iCloud, in your own iCloud account; achievements go to Apple's
-Game Center. With your permission (asked first in the EEA, UK and Switzerland; on by default elsewhere and switchable off in
-<b>Settings &rarr; Analytics</b>) we use <b>Google Analytics for Firebase</b> to count installs and see how the game is played,
-so we can improve it and measure our own advertising. It never identifies you personally.</div>
+<div class="card"><b>In short:</b> the game is free and shows ads on iPhone and iPad (optional reward videos, and an occasional
+full-screen ad between restaurant days), served through Unity LevelPlay by ironSource Ads, Google AdMob and Unity Ads. There
+are optional in-app purchases and no accounts. Your progress is stored on your device and, if you use iCloud, in your own
+iCloud account; achievements go to Apple's Game Center. The game asks your age once: players under 13 get no analytics and
+only child-directed ads. With your permission (asked first in the EEA, UK and Switzerland; on by default elsewhere and
+switchable off in <b>Settings &rarr; Analytics</b>) we use <b>Google Analytics for Firebase</b> to see how the game is played
+and measure our own advertising. Ads are <b>not personalised</b> unless you are 16 or older <b>and</b> allow tracking when
+Apple's prompt asks. The Mac version has no ads.</div>
 
 <h2>Information stored on your device</h2>
 <p>Your restaurant progress, coins, chosen chef and settings (music, effects and ambience volume, haptics, reduced motion)
@@ -325,6 +329,17 @@ achievements and your best-day score are shared with Game Center. Both are Apple
 off in your device's Settings (iCloud, Game Center), and <b>Settings &rarr; Progress &rarr; Reset</b> in the game erases your
 restaurant on all your devices.</p>
 
+<h2>Your age</h2>
+<p>When the game first starts it asks how old you are (under 13, 13 to 15, or 16 or older). The answer stays on your device
+and decides:</p>
+<ul>
+<li><b>Under 13:</b> no analytics, never the tracking prompt, and every ad request is marked child-directed (COPPA), not
+personalised and limited to the &ldquo;G&rdquo; (general audience) content rating.</li>
+<li><b>13 to 15:</b> analytics as described below; ads are not personalised (marked under the age of consent) and rated G.</li>
+<li><b>16 or older:</b> analytics as described below; ads are rated G and personalised only if you allow tracking.</li>
+</ul>
+<p>Nothing is measured and no ad is requested until you answer.</p>
+
 <h2>Analytics (Google Analytics for Firebase)</h2>
 <p>To understand how many people play, where new players get stuck and which of our ads on Google bring new players, the
 game uses Google Analytics for Firebase, provided by Google. When analytics is allowed it receives:</p>
@@ -333,12 +348,12 @@ game uses Google Analytics for Firebase, provided by Google. When analytics is a
 <li>device and app information: device model, iOS version, app version, language, country/region (derived from your IP
 address, which Google does not store as such), first-open and session times;</li>
 <li>game events: tutorial steps completed, restaurant level reached, rooms, cookers, crew and upgrades bought, days
-closed and their sales total, "new game" and iCloud restores.</li>
+closed and their sales total, "new game" and iCloud restores, purchases (product and price), reward videos watched and the
+estimated value of ads shown.</li>
 </ul>
-<p>We use this only to improve the game and to measure our own advertising campaigns (for example, how many installs an
-ad brought). It is <b>not</b> used for personalised advertising, is not combined with data from other companies' apps or
-websites, and the game never asks for or uses the advertising identifier (IDFA), so it does not "track" you as Apple
-defines it. Google processes this data under its own policy:
+<p>We use this to improve the game and to measure our own advertising campaigns (for example, how many installs an ad
+brought). Unless you allow tracking (below), it is not used for personalised advertising and is not combined with data from
+other companies' apps or websites. Google processes this data under its own policy:
 <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its
 services</a>, and keeps detailed event data for 2 months (the Google Analytics default; reports use aggregated counts).</p>
 <ul>
@@ -346,10 +361,39 @@ services</a>, and keeps detailed event data for 2 months (the Google Analytics d
 <li><b>Everywhere:</b> turn it off any time in <b>Settings &rarr; Analytics</b>. Analytics stops on that device.</li>
 </ul>
 
+<h2>Advertising</h2>
+<p>On iPhone and iPad the game shows optional reward videos you choose to watch (for example, to double a day's takings) and,
+from the fourth restaurant day, an occasional full-screen ad as you close a day's summary. Owner's Pass holders never see
+the full-screen ads. All ads are limited to the &ldquo;G&rdquo; content rating.</p>
+<p>Ads are served through <b>Unity LevelPlay</b>, an ad mediation service of Unity Technologies (ironSource), which picks
+each ad from <b>ironSource Ads, Google AdMob and Unity Ads</b>. To deliver and measure ads and prevent fraud, these ad partners
+may collect from your device: IP address (and the approximate location derived from it), device and operating-system
+information, the identifier for vendors (IDFV), ad interactions (for example, whether an ad was shown or tapped) and
+diagnostics. Each processes this under its own policy:
+<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity (LevelPlay, ironSource Ads, Unity Ads)</a> and
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its
+services</a>. When analytics is on, the game also sends the estimated value of each ad shown (no personal data) to Google
+Analytics for Firebase.</p>
+<ul>
+<li><b>Tracking.</b> If you said you are 16 or older, the game shows Apple's App Tracking Transparency prompt once, after
+your first finished day. Only if you choose <b>Allow</b> do the ad partners receive your device's advertising identifier
+(IDFA), may ads be personalised to your interests, and may Google Analytics share play statistics with Google's advertising
+services to measure which of our ads brought you to the game. Either answer leaves the game the same; change it any time in
+iOS <b>Settings &rarr; Privacy &amp; Security &rarr; Tracking</b>. Players under 16 are never asked.</li>
+<li><b>EEA, UK and Switzerland:</b> Google's consent form asks for your ad choices before the first ad; change them later in
+<b>Settings &rarr; Ad choices</b>.</li>
+</ul>
+
+<h2>In-app purchases</h2>
+<p>Purchases (Owner's Pass, Chef Pack, coin packs) are processed by Apple. We never receive your payment details. The App
+Store tells the game which items your Apple ID owns so they can be delivered and restored (product, transaction identifiers
+and dates); this stays on your device and in your iCloud save.</p>
+
 <h2>Information we do not collect</h2>
-<p>We do not collect your name, email address, phone number, contacts, photos, precise location, health data,
-browsing history or purchase details. There is no advertising inside the game and we do not sell or share personal
-information for cross-context behavioural advertising.</p>
+<p>We do not collect your name, email address, phone number, contacts, photos, precise location, health data or browsing
+history, and we do not sell personal information. If you allow tracking, our ad partners may use your advertising identifier
+for personalised ads, which some US state laws treat as &ldquo;sharing&rdquo; for cross-context behavioural advertising; you can
+stop this at any time by turning tracking off in iOS Settings.</p>
 
 <h2>Controllers and local multiplayer</h2>
 <p>Local co-op uses game controllers connected to your device. Controller input is used only to play and is not stored
@@ -360,13 +404,15 @@ or transmitted.</p>
 emails when they are no longer needed.</p>
 
 <h2>Children</h2>
-<p>The game is suitable for all ages but is not directed at children under 13. Analytics collects no personal information;
-if you believe a child has sent us personal information (for example by email), contact us and we will delete it.</p>
+<p>The game is suitable for all ages but is not directed at children under 13. Players who say they are under 13 get no
+analytics, are never asked about tracking, and only see child-directed, non-personalised ads rated G. If you believe a child
+has sent us personal information (for example by email), contact us and we will delete it.</p>
 
 <h2>Your rights</h2>
 <p>Depending on where you live (for example under the GDPR, UK GDPR, CCPA/CPRA or India's DPDP Act) you may have the right to
 access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. You can
-withdraw analytics consent at any time in <b>Settings &rarr; Analytics</b>, reset your game in <b>Settings &rarr; Progress &rarr;
+withdraw analytics consent at any time in <b>Settings &rarr; Analytics</b>, change ad choices in <b>Settings &rarr; Ad
+choices</b> (EEA, UK, Switzerland) or tracking in iOS Settings, reset your game in <b>Settings &rarr; Progress &rarr;
 Reset</b>, or delete the game. Analytics data is not linked to your identity, so to ask Google to delete it, email us the
 approximate date you played and your device model and we will request deletion of that app instance. Email
 <a href="mailto:{EMAIL}">{EMAIL}</a>; we answer within 30 days. You may also complain to your local data-protection authority.</p>
@@ -393,7 +439,9 @@ License Agreement</a> also applies; if anything here conflicts with it, Apple's 
 <p>We give you a personal, non-transferable, revocable licence to download and play the game for non-commercial purposes.
 Do not copy, modify, reverse engineer, resell or exploit the game.</p>
 <h2>Purchases</h2>
-<p>The game contains no ads and no in-app purchases. Coins earned in the game are a virtual reward with no cash value.</p>
+<p>The game is free. It shows ads on iPhone and iPad and offers optional in-app purchases (Owner's Pass, Chef Pack and coin
+packs), processed by Apple under the App Store's terms; Restore Purchases is in the Shop. Nothing for sale is needed to finish
+the game. Coins have no cash value and cannot be exchanged for money.</p>
 <h2>Availability and changes</h2>
 <p>We may update the game or change its content. To the extent the law allows, the game is provided &ldquo;as is&rdquo; and we
 are not liable for indirect or consequential losses. Nothing in these terms limits rights you have under consumer-protection
@@ -437,7 +485,9 @@ devices that share the same iCloud account.</p>
 <h3>Achievements and leaderboard</h3>
 <p>Sign in to Game Center in your device's Settings to earn achievements and post your best day's sales.</p>
 <h3>Are there ads or purchases?</h3>
-<p>No. The game has no ads and no in-app purchases.</p>
+<p>The game is free. On iPhone and iPad it offers optional reward videos and shows an occasional ad as you close a day; the
+Owner's Pass removes those ads and doubles your cash. Purchases are optional and Restore Purchases is in the Shop. Players
+of the earlier paid version keep the Owner's Pass and Chef Pack for free.</p>
 <h3>How do I turn analytics off?</h3>
 <p>Open <b>Settings &rarr; Analytics</b> and switch it off. Details are in the <a href="/{g['slug']}/privacy.html">Privacy Policy</a>.</p>
 <h3>The game feels slow or my device is warm.</h3>
@@ -454,54 +504,113 @@ FAIRWAY = dict(
 rivals across four tours, fight through championships of 64 golfers, and try seven special events including The Bogey Run.
 Four courses: parkland, desert, clifftop links and volcanic islands. Five golfers with their own strengths, and clubs,
 balls, bags and clothes to earn by playing.</p>
-<p><b>One price. No ads. No in-app purchases. No account. Plays offline.</b></p>""",
+<p><b>Free to play. No account. Plays offline.</b></p>""",
     kids=False, products=[],
 )
 FS_UPDATED = "3 November 2026"
+FS_PRIVACY_UPDATED = "14 November 2026"   # free with ads, purchases, analytics, tracking prompt
 
 
 def fs_privacy(g):
     n = escape(g["name"])
     body = f"""
 <h1>{n} &mdash; Privacy Policy</h1>
-<p class="meta">Last updated: {FS_UPDATED}</p>
+<p class="meta">Last updated: {FS_PRIVACY_UPDATED}</p>
 <p>This policy covers the game <b>{n}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER} (&ldquo;we&rdquo;, &ldquo;us&rdquo;),
-on iPhone.</p>
+on iPhone and iPad.</p>
 
-<div class="card"><b>In short: the game collects nothing.</b> It has no account, no ads, no analytics, no tracking and no
-in-app purchases, and it does not connect to any server of ours or anyone else's. Everything you do in the game stays on
-your device.</div>
+<div class="card"><b>In short:</b> the game is free with optional in-app purchases and shows ads (optional reward videos and
+an occasional full-screen ad between rounds), served through Unity LevelPlay by ironSource Ads, Google AdMob and Unity Ads.
+There are no accounts. Your progress stays on your device and in your own iCloud. With your permission (asked first in the
+EEA, UK and Switzerland; on by default elsewhere) anonymous gameplay statistics go to <b>Google Analytics for Firebase</b>;
+switch them off any time in <b>Settings &rarr; Share usage stats</b>. Ads are <b>personalised only</b> if usage stats are on
+<b>and</b> you allow tracking when Apple's prompt asks.</div>
 
-<h2>Information stored on your device</h2>
-<p>Your progress (golfers, clubs, clothes, coins and gems earned in play, tour results, trophies, records) and your settings
-are saved in a file inside the game's own storage on your device. We cannot see it. It is included in your device's own
-backups if you have them turned on, under Apple's terms. Deleting the game deletes this data.</p>
+<h2>Information stored on your device and in iCloud</h2>
+<p>Your progress (golfers, clubs, clothes, coins and gems, tour results, trophies, records), items you bought and your
+settings are saved in the game's own storage on your device and, if you are signed in to iCloud, in <b>your own iCloud
+account</b> so a new device or a reinstall carries on. We cannot see either copy. Deleting the game deletes the copy on the
+device; the iCloud copy is handled by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
-<h2>Information we collect</h2>
-<p>None. The game does not collect, transmit, sell or share any personal data or usage data. It contains no third-party
-SDKs for advertising, analytics, crash reporting or attribution, does not use the advertising identifier and never shows
-Apple's tracking permission prompt.</p>
+<h2>Analytics (Google Analytics for Firebase)</h2>
+<p>To see how the game is played, improve it and measure our own advertising, the game uses Google Analytics for Firebase,
+provided by Google. When usage stats are on it receives:</p>
+<ul>
+<li>an app-instance identifier created by Firebase and the identifier for vendors (IDFV), not your name, email or Apple ID;</li>
+<li>device and app information: device model, iOS version, app version, language, country/region (derived from your IP
+address, which Google does not store as such), first-open and session times;</li>
+<li>game events: tutorial steps, rounds started and finished, screens opened, coins earned, trophies, shop visits,
+purchases (product and price), reward videos watched and the estimated value of ads shown.</li>
+</ul>
+<p>Google processes this under its own policy:
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its
+services</a>, and keeps detailed event data for 2 months (the Google Analytics default; reports use aggregated counts).</p>
+<ul>
+<li><b>EEA, UK and Switzerland:</b> nothing is collected until you choose <b>Allow</b> on the one-time privacy card.</li>
+<li><b>Everywhere:</b> turn it off any time in <b>Settings &rarr; Share usage stats</b>. Stats then stop and ads are no longer
+personalised.</li>
+</ul>
+
+<h2>Advertising</h2>
+<p>The game shows optional reward videos you choose to watch (for example, to double a round's coins or retake a shot) and,
+after your first rounds, an occasional full-screen ad as you leave a finished round. Remove Ads turns the full-screen ads
+off for good. Ads are limited to the &ldquo;PG&rdquo; content rating and are not child-directed.</p>
+<p>Ads are served through <b>Unity LevelPlay</b>, an ad mediation service of Unity Technologies (ironSource), which picks
+each ad from <b>ironSource Ads, Google AdMob and Unity Ads</b>. To deliver and measure ads and prevent fraud, these ad partners
+may collect from your device: IP address (and the approximate location derived from it), device and operating-system
+information, the identifier for vendors (IDFV), ad interactions (for example, whether an ad was shown or tapped) and
+diagnostics. Each processes this under its own policy:
+<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity (LevelPlay, ironSource Ads, Unity Ads)</a> and
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its
+services</a>. When analytics is on, the game also sends the estimated value of each ad shown (no personal data) to Google
+Analytics for Firebase.</p>
+<ul>
+<li><b>Tracking.</b> If usage stats are on, the game shows Apple's App Tracking Transparency prompt once. Only if you choose
+<b>Allow</b> do the ad partners receive your device's advertising identifier (IDFA), may ads be personalised to your
+interests, and may Google Analytics share statistics with Google's advertising services to measure which of our ads brought
+you to the game. Either answer leaves the game the same; change it any time in iOS <b>Settings &rarr; Privacy &amp; Security
+&rarr; Tracking</b>.</li>
+<li><b>EEA, UK and Switzerland:</b> Google's consent form asks for your ad choices before the first ad; change them later in
+<b>Settings &rarr; Ad privacy choices</b>.</li>
+</ul>
+
+<h2>In-app purchases</h2>
+<p>Purchases (Full Tour, Golfer Pack, Remove Ads, coin packs) are processed by Apple. We never receive your payment details.
+The App Store tells the game which items your Apple ID owns so they can be delivered and restored (product, transaction
+identifiers and dates); this stays on your device and in your iCloud save.</p>
 
 <h2>Apple services</h2>
 <p>The game may ask Apple to show its standard &ldquo;rate this app&rdquo; prompt after you win a championship. That prompt
-is run by Apple; we receive no information from it. Downloading and paying for the game is handled by Apple under
-<a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. Apple may give us anonymous, aggregated download
-and crash statistics through App Store Connect if you have chosen to share them with developers in your device settings.</p>
+is run by Apple; we receive no information from it. Apple may give us anonymous, aggregated download and crash statistics
+through App Store Connect if you have chosen to share them with developers in your device settings.</p>
 
 <h2>Sharing a result</h2>
 <p>If you tap <b>Share</b> after a match, the game opens your device's share sheet with a short text of your result. Nothing
 is sent unless you choose where to send it.</p>
 
+<h2>Information we do not collect</h2>
+<p>We do not collect your name, email address, phone number, contacts, photos, precise location, health data or browsing
+history, and we do not sell personal information. If you allow tracking, our ad partners may use your advertising identifier
+for personalised ads, which some US state laws treat as &ldquo;sharing&rdquo; for cross-context behavioural advertising; you can
+stop this at any time by turning tracking off in iOS Settings or usage stats off in the game.</p>
+
 <h2>Children</h2>
-<p>{n} is made for a general audience and is not directed at children under 13. Because the game collects no personal
-information from anyone, it collects none from children.</p>
+<p>{n} is made for a general audience and is not directed at children under 13. We do not knowingly collect personal
+information from children. If you believe a child has provided personal information to us, contact us at
+<a href="mailto:{EMAIL}">{EMAIL}</a> and we will delete it.</p>
 
 <h2>Your rights</h2>
-<p>Because we hold no data about you, there is nothing for us to access, correct or delete. To erase your progress, delete
-the game from your device. Questions are welcome at <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+<p>Depending on where you live (for example under the GDPR, UK GDPR, CCPA/CPRA or India's DPDP Act) you may have the right to
+access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. Switch usage
+stats off in <b>Settings &rarr; Share usage stats</b>, change ad choices in <b>Settings &rarr; Ad privacy choices</b> (EEA, UK,
+Switzerland) or tracking in iOS Settings, or delete the game. Analytics data is not linked to your identity, so to ask Google
+to delete it, email us the approximate date you played and your device model and we will request deletion of that app
+instance. Email <a href="mailto:{EMAIL}">{EMAIL}</a>; we answer within 30 days. You may also complain to your local
+data-protection authority.</p>
 
 <h2>Changes</h2>
-<p>If the game ever starts collecting any data, we will update this policy and the App Store privacy details first.</p>
+<p>If a future version changes how information is handled, we will update this page and the date above before that version
+is released.</p>
 
 <h2>Contact</h2>
 <p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
@@ -521,8 +630,9 @@ Agreement</a> also applies; if anything here conflicts with it, Apple's agreemen
 <p>We give you a personal, non-transferable, revocable licence to play the game for non-commercial purposes. Do not copy,
 modify, reverse engineer, resell or exploit the game.</p>
 <h2>Price and purchases</h2>
-<p>The game is bought once from the App Store. It has no ads and no in-app purchases. Coins and gems are earned only by
-playing, have no cash value and cannot be bought, sold or exchanged.</p>
+<p>The game is free. It shows ads and offers optional in-app purchases (Full Tour, Golfer Pack, Remove Ads and coin packs),
+processed by Apple under the App Store's terms; Restore Purchases is in the Shop and in Settings. Coins and gems have no cash
+value and cannot be sold or exchanged for money.</p>
 <h2>Names</h2>
 <p>All golfers, rivals, tours, courses, events and equipment in the game are fictional. Any resemblance to real people,
 tournaments or brands is coincidental.</p>
@@ -562,24 +672,33 @@ and change looks only, never stats.</p>
 <p>Turn up the volume with the side buttons while the game is open, and check <b>Settings &rarr; Music</b> and
 <b>Sound effects</b> in the game. The game plays even with the ring switch on silent.</p>
 <h3>Is my progress saved?</h3>
-<p>Yes, automatically, on your iPhone. It is not stored online, so deleting the game deletes your progress.</p>
+<p>Yes, automatically, on your iPhone and in your own iCloud account if you are signed in, so a reinstall or a new device
+carries on.</p>
 <h3>Are there ads or purchases?</h3>
-<p>No. You buy the game once; there are no ads and no in-app purchases.</p>
+<p>The game is free. It offers optional reward videos and shows an occasional ad between rounds; Remove Ads turns those
+ads off. Purchases are optional and Restore Purchases is in the Shop and in Settings. Players of the earlier paid version
+keep Remove Ads, Full Tour and the Golfer Pack for free.</p>
 <h3>How do I get a refund?</h3>
 <p>Request it from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
 <h3>Privacy</h3>
-<p>The game collects nothing. See the <a href="/{g['slug']}/privacy.html">Privacy Policy</a>.</p>
+<p>With usage stats on, anonymous gameplay statistics go to Google Analytics for Firebase; switch them off in <b>Settings
+&rarr; Share usage stats</b>. Ads come from Unity LevelPlay with ironSource Ads, Google AdMob and Unity Ads. See the
+<a href="/{g['slug']}/privacy.html">Privacy Policy</a>.</p>
 """
     page(f"{g['slug']}/support.html", f"{g['name']} Support", body, g)
 
 
 games = [TUMBLEPALS, SPINANDCARVE]
 for g in games:
-    privacy(g); terms(g); support(g); landing(g)
+    # Spin & Carve's privacy page is hand-maintained (age bands, Firebase, ATT, LevelPlay): edit spinandcarve/privacy.html.
+    if g is not SPINANDCARVE: privacy(g)
+    terms(g); support(g); landing(g)
 nmt_privacy(NIGHTMARKET); nmt_terms(NIGHTMARKET); nmt_support(NIGHTMARKET); landing(NIGHTMARKET)
 fs_privacy(FAIRWAY); fs_terms(FAIRWAY); fs_support(FAIRWAY); landing(FAIRWAY)
-home(games + [NIGHTMARKET, FAIRWAY])
-(ROOT / "app-ads.txt").write_text("google.com, pub-1369340241981817, DIRECT, f08c47fec0942fa0\n")
+# index.html is hand-maintained (it also lists Ember Orchards, Party Royale, StoragePilot and NetScope); home() would drop them.
+# home(games + [NIGHTMARKET, FAIRWAY])
+# app-ads.txt: our AdMob line + the Unity LevelPlay / Unity Ads sellers (copy the list from Unity dashboard → Monetization → Settings → App-ads.txt)
+(ROOT / "app-ads.txt").write_text((ROOT / "tools" / "app-ads.txt").read_text())
 (ROOT / ".nojekyll").write_text("")
 (ROOT / "404.html").write_text('<!doctype html><meta charset="utf-8"><title>Not found</title><p>Page not found. <a href="/">Home</a></p>\n')
 print("built", sorted(str(p.relative_to(ROOT)) for p in ROOT.rglob("*.html")))
