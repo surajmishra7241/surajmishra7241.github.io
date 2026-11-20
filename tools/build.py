@@ -508,7 +508,7 @@ balls, bags and clothes to earn by playing.</p>
     kids=False, products=[],
 )
 FS_UPDATED = "3 November 2026"
-FS_PRIVACY_UPDATED = "14 November 2026"   # free with ads, purchases, analytics, tracking prompt
+FS_PRIVACY_UPDATED = "20 November 2026"   # 1.1: challenge links, settings/time, consent region, Google consent form, Ad Quality
 
 
 def fs_privacy(g):
@@ -517,14 +517,15 @@ def fs_privacy(g):
 <h1>{n} &mdash; Privacy Policy</h1>
 <p class="meta">Last updated: {FS_PRIVACY_UPDATED}</p>
 <p>This policy covers the game <b>{n}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER} (&ldquo;we&rdquo;, &ldquo;us&rdquo;),
-on iPhone and iPad.</p>
+on iPhone (and on iPad, which runs iPhone apps).</p>
 
 <div class="card"><b>In short:</b> the game is free with optional in-app purchases and shows ads (optional reward videos and
 an occasional full-screen ad between rounds), served through Unity LevelPlay by ironSource Ads, Google AdMob and Unity Ads.
 There are no accounts. Your progress stays on your device and in your own iCloud. With your permission (asked first in the
 EEA, UK and Switzerland; on by default elsewhere) anonymous gameplay statistics go to <b>Google Analytics for Firebase</b>;
 switch them off any time in <b>Settings &rarr; Share usage stats</b>. Ads are <b>personalised only</b> if usage stats are on
-<b>and</b> you allow tracking when Apple's prompt asks.</div>
+<b>and</b> you allow tracking when Apple's prompt asks (and, in the EEA, UK and Switzerland, Google's consent form allows it). A challenge link you choose to send carries your player name and
+score; our server shows them on the challenge page and does not keep them.</div>
 
 <h2>Information stored on your device and in iCloud</h2>
 <p>Your progress (golfers, clubs, clothes, coins and gems, tour results, trophies, records), items you bought and your
@@ -546,7 +547,9 @@ purchases (product and price), reward videos watched and the estimated value of 
 <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its
 services</a>, and keeps detailed event data for 2 months (the Google Analytics default; reports use aggregated counts).</p>
 <ul>
-<li><b>EEA, UK and Switzerland:</b> nothing is collected until you choose <b>Allow</b> on the one-time privacy card.</li>
+<li><b>EEA, UK and Switzerland:</b> nothing is collected until you choose <b>Allow</b> on the one-time privacy card. The game
+treats you as there if your device's region or time zone is in one of these countries, or once Google's consent check (made
+with the ads, from your IP address) says its consent form applies to you; from then on stats stop until you choose.</li>
 <li><b>Everywhere:</b> turn it off any time in <b>Settings &rarr; Share usage stats</b>. Stats then stop and ads are no longer
 personalised.</li>
 </ul>
@@ -554,9 +557,11 @@ personalised.</li>
 <h2>Advertising</h2>
 <p>The game shows optional reward videos you choose to watch (for example, to double a round's coins or retake a shot) and,
 after your first rounds, an occasional full-screen ad as you leave a finished round. Remove Ads turns the full-screen ads
-off for good. Ads are limited to the &ldquo;PG&rdquo; content rating and are not child-directed.</p>
+off for good. Google AdMob ads are limited to its &ldquo;PG&rdquo; content rating. The game is made for a general audience,
+so ad requests are not marked as directed at children.</p>
 <p>Ads are served through <b>Unity LevelPlay</b>, an ad mediation service of Unity Technologies (ironSource), which picks
-each ad from <b>ironSource Ads, Google AdMob and Unity Ads</b>. To deliver and measure ads and prevent fraud, these ad partners
+each ad from <b>ironSource Ads, Google AdMob and Unity Ads</b>; LevelPlay includes Unity's Ad Quality component, which checks
+the ads shown for quality and safety. To deliver and measure ads and prevent fraud, these ad partners
 may collect from your device: IP address (and the approximate location derived from it), device and operating-system
 information, the identifier for vendors (IDFV), ad interactions (for example, whether an ad was shown or tapped) and
 diagnostics. Each processes this under its own policy:
@@ -571,7 +576,8 @@ interests, and may Google Analytics share statistics with Google's advertising s
 you to the game. Either answer leaves the game the same; change it any time in iOS <b>Settings &rarr; Privacy &amp; Security
 &rarr; Tracking</b>.</li>
 <li><b>EEA, UK and Switzerland:</b> Google's consent form asks for your ad choices before the first ad; change them later in
-<b>Settings &rarr; Ad privacy choices</b>.</li>
+<b>Settings &rarr; Ad privacy choices</b>. The ad partners read your answers there directly, and the game applies them to
+Google Analytics too: if you decline personalised ads there, Google Analytics may not use your data for advertising.</li>
 </ul>
 
 <h2>In-app purchases</h2>
@@ -585,12 +591,31 @@ is run by Apple; we receive no information from it. Apple may give us anonymous,
 through App Store Connect if you have chosen to share them with developers in your device settings.</p>
 
 <h2>Sharing a result</h2>
-<p>If you tap <b>Share</b> after a match, the game opens your device's share sheet with a short text of your result. Nothing
-is sent unless you choose where to send it.</p>
+<p>If you tap <b>Share</b> after a match, the game opens your device's share sheet with a short text of your result and a
+link to the game. Nothing is sent unless you choose where to send it.</p>
+
+<h2>Challenging a friend</h2>
+<p>If you tap <b>Challenge a friend</b> (or <b>Send one back</b>) on a result screen, the game builds a link and opens your
+device's share sheet; nothing is sent unless you choose where to send it. The link itself contains the challenge: the kind of
+round, a number that picks its holes and wind, the day or week for a Daily Challenge or Weekly Cup, your score, and the player
+name you chose in the game (change it any time in <b>Profile &rarr; Change name</b>). Anyone who receives the link can read
+these.</p>
+<p>The link opens a page on our server (<b>evapi.shubhsandes.com</b>), which shows the challenge from the link and offers to
+open or download the game. The server does not store the name, score or link. It keeps only a daily count of how many
+challenge pages were opened, by kind of round, with nothing about who opened them. The connection passes through Cloudflare,
+our hosting network, which handles your IP address to deliver the page under
+<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>. When a friend's link opens the game, the
+game reads the challenge from the link on your device.</p>
+
+<h2>Game settings and time</h2>
+<p>When it starts and when you return to it, the game asks the same server for its current settings (for example event and
+ad pacing limits) and reads the server's clock so daily and weekly events change at the right time. This request carries no
+identifier, name, score or other game data. If the server can't be reached, the game uses its built-in settings and plays
+the same.</p>
 
 <h2>Information we do not collect</h2>
-<p>We do not collect your name, email address, phone number, contacts, photos, precise location, health data or browsing
-history, and we do not sell personal information. If you allow tracking, our ad partners may use your advertising identifier
+<p>We do not collect your name (the player name in a challenge link is read from the link and not stored), email address,
+phone number, contacts, photos, precise location, health data or browsing history, and we do not sell personal information. If you allow tracking, our ad partners may use your advertising identifier
 for personalised ads, which some US state laws treat as &ldquo;sharing&rdquo; for cross-context behavioural advertising; you can
 stop this at any time by turning tracking off in iOS Settings or usage stats off in the game.</p>
 
@@ -603,9 +628,9 @@ information from children. If you believe a child has provided personal informat
 <p>Depending on where you live (for example under the GDPR, UK GDPR, CCPA/CPRA or India's DPDP Act) you may have the right to
 access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. Switch usage
 stats off in <b>Settings &rarr; Share usage stats</b>, change ad choices in <b>Settings &rarr; Ad privacy choices</b> (EEA, UK,
-Switzerland) or tracking in iOS Settings, or delete the game. Analytics data is not linked to your identity, so to ask Google
-to delete it, email us the approximate date you played and your device model and we will request deletion of that app
-instance. Email <a href="mailto:{EMAIL}">{EMAIL}</a>; we answer within 30 days. You may also complain to your local
+Switzerland) or tracking in iOS Settings, or delete the game. We don't know who you are: analytics data is tied to a random app-instance identifier, not to a name or
+account. To ask Google to delete it, email us the approximate date you played and your device model and we will request
+deletion of that app instance. Email <a href="mailto:{EMAIL}">{EMAIL}</a>; we answer within 30 days. You may also complain to your local
 data-protection authority.</p>
 
 <h2>Changes</h2>
