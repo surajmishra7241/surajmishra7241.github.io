@@ -19,33 +19,79 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;color:var(--muted
 <header><a class="brand" href="/">Suraj Mishra Games</a><nav><a href="/spinandcarve/">Spin &amp; Carve</a><a href="/spinandcarve/privacy.html">Privacy</a><a href="/spinandcarve/terms.html">Terms</a><a href="/spinandcarve/support.html">Support</a></nav></header>
 <main>
 <h1>Spin &amp; Carve &mdash; Privacy Policy</h1>
-<p class="meta">Last updated: 4 October 2026</p>
+<p class="meta">Last updated: 20 November 2026</p>
 <p>This policy explains what information the game <b>Spin &amp; Carve</b> (&ldquo;the game&rdquo;), published by Suraj Mishra
 (&ldquo;we&rdquo;, &ldquo;us&rdquo;), handles, why, and the choices you have. It applies to the game on iPhone, iPad and
 Android.</p>
 
 <div class="card"><b>In short:</b> we do not ask for your name, email, contacts, photos or precise location. Your progress is
-stored on your device. Ads are provided by Google AdMob and are <b>not personalised</b>. Purchases are handled by Apple or
-Google. The game does <b>not</b> track you across other companies' apps and websites and never shows Apple's tracking
-permission prompt.</div>
+stored on your device (and in your own iCloud on iPhone). On iPhone and iPad the game sends anonymous play statistics to Google Analytics for Firebase, which
+you can switch off in <b>Settings &rarr; Share usage stats</b>; nothing is sent for players under 13. Ads are served through
+Unity LevelPlay by ironSource Ads, Google AdMob and Unity Ads. They are <b>not personalised</b> unless you are 16 or older
+<b>and</b> allow tracking when Apple's prompt asks.
+Purchases are handled by Apple or Google.</div>
 
 <h2>Information stored on your device</h2>
-<p>Game progress, coins, settings, purchases you own and (for age-appropriate behaviour) the year of birth you enter are
-saved on your device only. Deleting the game deletes this data. You can also erase it at any time in
-<b>Settings &rarr; Delete my data</b>.</p>
+<p>Game progress, coins, settings, purchases you own and the age range you choose when the game asks (under 13, 13 to 15,
+or 16 or older) are saved on your device. Deleting the game deletes this data. You can also erase it at any time in
+<b>Settings &rarr; Delete my data</b>, which also clears the game's analytics identifier on the device.</p>
+<p><b>iCloud (iPhone).</b> If you are signed in to iCloud, the game also keeps a copy of your progress in your own iCloud
+account (Apple's iCloud key-value storage) so it comes back after a reinstall or on a new iPhone. This copy is stored by
+Apple under your Apple Account; we cannot see or access it. You can remove it by turning off iCloud for the game in iOS
+<b>Settings &rarr; [your name] &rarr; iCloud</b>.</p>
+<p>There is no account, sign-up or login, and the game has no chat or way to share anything you type.</p>
 
-<h2>Advertising (Google AdMob)</h2>
-<p>The game shows ads from Google AdMob: an occasional full-screen ad between levels and optional reward videos you choose
-to watch. To deliver and measure ads and prevent fraud, Google may collect from your device: IP address (and the
-approximate location derived from it), device and operating-system information, an app-specific identifier such as the
-identifier for vendors (IDFV) on iOS or the app set ID on Android, and ad interactions (for example, whether an ad was shown
-or tapped), and diagnostics. Google processes this under its own policy:
-<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its
-services</a>.</p>
+<h2>Your age</h2>
+<p>Before the first ad, the game asks how old you are. The answer stays on your device and is never shown to anyone. It
+decides:</p>
+<table>
+<tr><th>Age</th><th>Play statistics</th><th>Ads</th></tr>
+<tr><td>Under 13</td><td>Never sent</td><td>Child-directed, not personalised, suitable for all ages (G)</td></tr>
+<tr><td>13 to 15</td><td>Sent unless you switch them off</td><td>Not personalised, PG rating</td></tr>
+<tr><td>16 or older</td><td>Sent unless you switch them off</td><td>Not personalised, PG rating, unless you allow tracking (see below)</td></tr>
+</table>
+<p>Until you answer, the game sends no play statistics.</p>
+
+<h2>Play statistics (Google Analytics for Firebase, iPhone and iPad)</h2>
+<p>To see how the game is played, fix levels that are too hard and learn which of our ads bring new players, the game
+sends play statistics to Google Analytics for Firebase, a service of Google. The Android version does not send them.</p>
 <ul>
-<li>Ads in the game are <b>not personalised</b> (no interest-based advertising) and are limited to the PG content
-rating.</li>
-<li>The game never requests access to the iOS advertising identifier (IDFA) and does not track you.</li>
+<li><b>What is sent:</b> a random app-instance identifier created by Firebase; the identifier for vendors (IDFV); device
+model, iOS version, app version and language; your country or region (worked out from your IP address); when you open the
+game and for how long; and game events such as levels started and finished, stars earned, tutorial steps, coins earned and
+spent, ads offered and watched, and purchases (the product, its price and currency, never payment details).</li>
+<li><b>What is not sent:</b> your name, email, contacts, photos, precise location or anything you type.</li>
+<li><b>Your choice:</b> turn it off at any time in <b>Settings &rarr; Share usage stats</b>; Firebase then collects nothing
+more. In the European Economic Area, the United Kingdom and Switzerland it starts <b>off</b> and stays off until you turn it on.</li>
+<li><b>Retention:</b> we keep detailed event data in Google Analytics for no longer than 14 months.</li>
+<li>Google processes this information under its own terms:
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its
+services</a> and <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a>.</li>
+</ul>
+
+<h2>Advertising (Unity LevelPlay, Google AdMob, Unity Ads)</h2>
+<p>The game shows ads through Unity LevelPlay, an ad mediation service of Unity Technologies (ironSource), which picks
+each ad from ironSource Ads, Google AdMob and Unity Ads: an occasional full-screen ad after a finished piece, a small
+banner on some menu screens, and optional reward videos you choose to watch. To deliver and measure ads and prevent
+fraud, these ad partners may collect from your device: IP address (and the approximate location derived from it), device
+and operating-system information, an app-specific identifier such as the identifier for vendors (IDFV) on iOS or the app
+set ID on Android, ad interactions (for example, whether an ad was shown or tapped) and diagnostics. Each processes this
+under its own policy: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity (LevelPlay, ironSource
+Ads, Unity Ads)</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from
+sites or apps that use its services</a>. The game also sends the estimated value of each ad shown (no personal data) to
+Google Analytics for Firebase, when play statistics are on, so we can see which of our own ads bring players who enjoy
+the game.</p>
+<ul>
+<li>By default ads are <b>not personalised</b> (no interest-based advertising) and are limited to the PG content rating
+(G for players under 13).</li>
+<li><b>Tracking on iPhone and iPad.</b> If you said you are 16 or older, the game shows one short note,
+&ldquo;About ads&rdquo;, right after the age question and then Apple's App Tracking Transparency prompt, before any ad loads. Only if you choose <b>Allow</b>,
+the ad partners above receive your device's advertising identifier (IDFA), ads may be personalised to your interests, and Google
+Analytics may share play statistics with Google's advertising services to measure which of our ads brought you to the
+game. If you choose <b>Ask App Not to Track</b>, nothing changes: ads stay non-personalised. The game is the same either
+way, and you can change your answer at any time in iOS <b>Settings &rarr; Privacy &amp; Security &rarr; Tracking</b>.
+Players under 16 are never asked.</li>
+<li>On Android the game does not personalise ads.</li>
 <li>In the European Economic Area, the United Kingdom and Switzerland, Google's consent form asks for your choices when
 the game first starts; you can change them later in <b>Settings &rarr; Ad privacy choices</b>.</li>
 <li>Buying <b>Remove Ads</b> turns off the automatic ad breaks.</li>
@@ -58,28 +104,34 @@ dates). Subscriptions are managed and cancelled in your Apple ID or Google Play 
 
 <h2>Information we do not collect</h2>
 <p>We do not collect your name, email address, phone number, contacts, photos, precise location, health data or
-browsing history, and we do not sell or share personal information for cross-context behavioural advertising. We do not
-operate any server that receives your gameplay data.</p>
+browsing history, and we do not sell personal information. We do not run our own server that receives your gameplay
+data; play statistics go to Google Analytics for Firebase as described above. If you allow tracking on iPhone or iPad,
+our ad partners may use your advertising identifier for personalised ads, which some US state laws treat as &ldquo;sharing&rdquo;
+for cross-context behavioural advertising; you can stop this at any time by turning tracking off in iOS Settings.</p>
 
 <h2>Contacting support</h2>
 <p>If you email us, we receive your email address and whatever you write, and use it only to answer you. We delete
 support emails when they are no longer needed.</p>
 
 <h2>Children</h2>
-<p>Spin & Carve is intended for a general audience aged 13 and over and is not directed at children under 13. We do not knowingly
-collect personal information from children. If you believe a child has provided personal information to us, contact us
-at <a href="mailto:mail@shubhsandes.com">mail@shubhsandes.com</a> and we will delete it.</p>
+<p>Spin &amp; Carve is made for a general audience of all ages, so before the first ad it asks every player a neutral age
+question. If a player says they are under 13, the game sends no play statistics, never asks to track and shows only
+child-directed, non-personalised ads rated for all ages (G); for players under 16 ads are never personalised. Players under
+13 can play the whole game this way; nothing about it is locked behind the age answer. We do not knowingly collect personal information from children. If you believe a child has provided
+personal information to us, contact us at <a href="mailto:mail@shubhsandes.com">mail@shubhsandes.com</a> and we will delete it.</p>
 
 <h2>Your rights</h2>
 <p>Depending on where you live (for example under the GDPR, UK GDPR, CCPA/CPRA or India's DPDP Act) you may have the right
-to access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. Because
-your game data stays on your device, you can delete it yourself with <b>Settings &rarr; Delete my data</b> or by deleting the
-game. For anything else, email <a href="mailto:mail@shubhsandes.com">mail@shubhsandes.com</a>; we answer within 30 days. You may also complain to your
-local data-protection authority.</p>
+to access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. You can
+withdraw consent in the game at any time: switch off <b>Share usage stats</b>, change <b>Ad privacy choices</b>, or turn
+tracking off in iOS Settings. Your game data stays on your device, so you can delete it yourself with <b>Settings &rarr;
+Delete my data</b> or by deleting the game. For anything else, including deleting play statistics already sent to Google
+Analytics, email <a href="mailto:mail@shubhsandes.com">mail@shubhsandes.com</a>; we answer within 30 days. You may also
+complain to your local data-protection authority.</p>
 
 <h2>Security and retention</h2>
-<p>Data on your device is kept until you delete it or the game. Network traffic from the game uses encrypted connections
-(HTTPS).</p>
+<p>Data on your device is kept until you delete it or the game. Play statistics are kept as described above. Network
+traffic from the game uses encrypted connections (HTTPS).</p>
 
 <h2>Changes</h2>
 <p>If we change how the game handles information, we will update this page and the date above, and, for significant changes,
