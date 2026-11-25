@@ -738,16 +738,24 @@ on iPhone and iPad.</p>
 <div class="card"><b>In short:</b> the game is free. It shows ads (optional reward videos, an occasional full-screen ad between
 pages and a small banner while you play), served through Unity LevelPlay by ironSource Ads, Google AdMob and Unity Ads, and
 offers optional in-app purchases and an optional <b>Atlas Club</b> subscription, all processed by Apple. There are no
-accounts and no server of ours: your progress stays on your device. With usage stats on (the default, except that in the
+accounts and no server of ours: your progress stays on your device and, if you leave iCloud save on, in your own iCloud. With usage stats on (the default, except that in the
 EEA, UK and Switzerland they wait for your answer on Google's consent form) anonymous gameplay statistics go to <b>Google
 Analytics for Firebase</b>; switch them off any time in <b>Settings &rarr; Share usage stats</b>. Ads are <b>personalised
 only</b> if usage stats are on <b>and</b> you allow tracking when Apple's prompt asks (and, in the EEA, UK and Switzerland,
 Google's consent form allows it).</div>
 
-<h2>Information stored on your device</h2>
+<h2>Information stored on your device and in your iCloud</h2>
 <p>Your progress (pages finished, stars, coins, tools, pictures restored, daily gifts), items you bought, your membership
-status and your settings are saved in the game's own storage on your device. We cannot see it. Deleting the game deletes
-it.</p>
+status and your settings are saved in the game's own storage on your device. With <b>Settings &rarr; iCloud save</b> on (the
+default) a copy is also kept in your own iCloud account through Apple's iCloud key-value storage, so your progress comes
+back if you reinstall the game or play on another iPhone or iPad signed in to the same Apple Account. Apple stores this copy
+under its own privacy policy; we cannot see it. Turn iCloud save off in the game, or remove the game's iCloud data in iOS
+<b>Settings &rarr; your name &rarr; iCloud</b>.</p>
+
+<h2>Game Center</h2>
+<p>If you are signed in to Apple's Game Center, the game sends your number of pages restored and stars to its leaderboards
+and unlocks achievements. Apple runs Game Center and shows your Game Center nickname to other players as set in your Game
+Center settings; we do not receive your Apple ID or contacts. You can sign out of Game Center in iOS Settings.</p>
 
 <h2>Analytics (Google Analytics for Firebase)</h2>
 <p>To see how the game is played, improve it and measure our own advertising, the game uses Google Analytics for Firebase,
@@ -918,7 +926,11 @@ appear, email us the date of the purchase.</p>
 <p>The game is free with ads: optional reward videos, a full-screen ad now and then between pages and a banner on later
 pages. <b>No Ads</b> turns off the full-screen ads and the banner for good; Atlas Club members see no ads at all.</p>
 <h3>Is my progress saved?</h3>
-<p>Yes, automatically, on your device. Deleting the game deletes the progress.</p>
+<p>Yes, automatically, on your device and in your iCloud (Settings &rarr; iCloud save). Reinstall the game or open it on
+another iPhone or iPad signed in to the same Apple Account and your pages, stars and coins come back. Purchases come back
+with <b>Restore Purchases</b>.</p>
+<h3>Are there leaderboards?</h3>
+<p>Yes. Sign in to Game Center and tap <b>Settings &rarr; Game Center</b> for the leaderboards and 13 achievements.</p>
 <h3>How do I get a refund?</h3>
 <p>Request it from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
 <h3>Privacy</h3>
