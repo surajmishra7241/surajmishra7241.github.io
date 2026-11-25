@@ -713,6 +713,222 @@ keep Remove Ads, Full Tour and the Golfer Pack for free.</p>
     page(f"{g['slug']}/support.html", f"{g['name']} Support", body, g)
 
 
+INKFLIGHT = dict(
+    slug="inkflight", name="Inkflight",
+    tagline="Arrow puzzles that restore beautiful engravings. Clear the arrows, reveal the art.",
+    about="""<p>Every page of the Atlas hides an illustration under a tangle of ink arrows. Tap an arrow and it flies off the
+page the way it points; every arrow you clear washes its part of the engraving into colour. Six collections and 180
+hand-checked pages, from a fox and a lighthouse to Saturn and a palace gate, with four tools to help: Pencil, Eraser,
+Lens and Quill.</p>
+<p><b>Free to play. No account. Plays offline.</b> Optional Atlas Club membership: no ads, a new members' page every day
+and a daily gift.</p>""",
+    kids=False, products=[],
+)
+IF_UPDATED = "25 November 2026"
+
+
+def if_privacy(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} &mdash; Privacy Policy</h1>
+<p class="meta">Last updated: {IF_UPDATED}</p>
+<p>This policy covers the game <b>{n}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER} (&ldquo;we&rdquo;, &ldquo;us&rdquo;),
+on iPhone and iPad.</p>
+
+<div class="card"><b>In short:</b> the game is free. It shows ads (optional reward videos, an occasional full-screen ad between
+pages and a small banner while you play), served through Unity LevelPlay by ironSource Ads, Google AdMob and Unity Ads, and
+offers optional in-app purchases and an optional <b>Atlas Club</b> subscription, all processed by Apple. There are no
+accounts and no server of ours: your progress stays on your device. With usage stats on (the default, except that in the
+EEA, UK and Switzerland they wait for your answer on Google's consent form) anonymous gameplay statistics go to <b>Google
+Analytics for Firebase</b>; switch them off any time in <b>Settings &rarr; Share usage stats</b>. Ads are <b>personalised
+only</b> if usage stats are on <b>and</b> you allow tracking when Apple's prompt asks (and, in the EEA, UK and Switzerland,
+Google's consent form allows it).</div>
+
+<h2>Information stored on your device</h2>
+<p>Your progress (pages finished, stars, coins, tools, pictures restored, daily gifts), items you bought, your membership
+status and your settings are saved in the game's own storage on your device. We cannot see it. Deleting the game deletes
+it.</p>
+
+<h2>Analytics (Google Analytics for Firebase)</h2>
+<p>To see how the game is played, improve it and measure our own advertising, the game uses Google Analytics for Firebase,
+provided by Google. When usage stats are on it receives:</p>
+<ul>
+<li>an app-instance identifier created by Firebase and the identifier for vendors (IDFV), not your name, email or Apple ID;</li>
+<li>device and app information: device model, iOS version, app version, language, country/region (derived from your IP
+address, which Google does not store as such), first-open and session times;</li>
+<li>game events: pages started, won and lost, tools used, screens and offers viewed, purchases and subscriptions (product
+and price), reward videos watched and the estimated value of ads shown.</li>
+</ul>
+<p>Google processes this under its own policy:
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its
+services</a>, and keeps detailed event data for 2 months (reports use aggregated counts).</p>
+<ul>
+<li><b>EEA, UK and Switzerland:</b> nothing is collected until you answer Google's consent form, and only if you agree. The
+game treats you as there if your device's region is in one of these countries or Google's consent check says its form
+applies to you.</li>
+<li><b>Everywhere:</b> turn it off any time in <b>Settings &rarr; Share usage stats</b>. Stats then stop, ads are no longer
+personalised and the game does not ask for tracking.</li>
+</ul>
+
+<h2>Advertising</h2>
+<p>The game shows optional reward videos you choose to watch (for example, extra hearts, double coins, a free tool or free
+coins), a full-screen ad now and then as you leave a finished page (never while you are solving one, never after a lost
+page, and not on the first pages), and a small banner at the bottom of the puzzle screen on later pages. <b>No Ads</b>
+turns the full-screen ads and the banner off for good; <b>Atlas Club</b> members see no ads at all. Google AdMob ads are
+limited to its &ldquo;G&rdquo; content rating, and ad requests are not marked as directed at children.</p>
+<p>Ads are served through <b>Unity LevelPlay</b>, an ad mediation service of Unity Technologies (ironSource), which picks
+each ad from <b>ironSource Ads, Google AdMob and Unity Ads</b>; LevelPlay includes Unity's Ad Quality component, which checks
+the ads shown for quality and safety. To deliver and measure ads and prevent fraud, these ad partners may collect from your
+device: IP address (and the approximate location derived from it), device and operating-system information, the identifier
+for vendors (IDFV), ad interactions (for example, whether an ad was shown or tapped) and diagnostics. Each processes this
+under its own policy:
+<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity (LevelPlay, ironSource Ads, Unity Ads)</a> and
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its
+services</a>. When usage stats are on, the game also sends the estimated value of each ad shown (no personal data) to Google
+Analytics for Firebase.</p>
+<ul>
+<li><b>Tracking.</b> If usage stats are on, the game shows Apple's App Tracking Transparency prompt once, after your first
+pages, with a short note first. Only if you choose <b>Allow</b> do the ad partners receive your device's advertising
+identifier (IDFA), may ads be personalised to your interests, and may Google Analytics share statistics with Google's
+advertising services to measure which of our ads brought you to the game. Either answer leaves the game the same; change it
+any time in iOS <b>Settings &rarr; Privacy &amp; Security &rarr; Tracking</b>.</li>
+<li><b>EEA, UK and Switzerland:</b> Google's consent form asks for your ad choices before the first ad; change them later in
+<b>Settings &rarr; Privacy Choices</b>. The ad partners read your answers directly, and the game applies them to Google
+Analytics too.</li>
+</ul>
+
+<h2>Purchases and the Atlas Club subscription</h2>
+<p>Purchases (bundles, coins, Safety Net, No Ads) and the <b>Atlas Club</b> subscription are processed by Apple. We never
+receive your name, Apple ID or payment details. The App Store tells the game which items and which membership your Apple ID
+owns, with product, transaction identifiers and dates, so they can be delivered, renewed and restored; this stays on your
+device. You manage or cancel the subscription in your Apple Account settings.</p>
+
+<h2>Apple services</h2>
+<p>The game may ask Apple to show its standard &ldquo;rate this app&rdquo; prompt after a good win. That prompt is run by
+Apple; we receive no information from it. Apple may give us anonymous, aggregated download, sales and crash statistics
+through App Store Connect if you have chosen to share them with developers.</p>
+
+<h2>Contacting us</h2>
+<p>If you email support from <b>Settings &rarr; Contact Support</b>, the draft includes the game version, your current page,
+your device model and iOS version so we can help. We receive your email address and anything you write only if you send
+it, use it only to answer you and delete the thread within 12 months.</p>
+
+<h2>Information we do not collect</h2>
+<p>We do not collect your name, email address (unless you write to us), phone number, contacts, photos, precise location,
+health data or browsing history, and we do not sell personal information. If you allow tracking, our ad partners may use
+your advertising identifier for personalised ads, which some US state laws treat as &ldquo;sharing&rdquo; for cross-context
+behavioural advertising; stop this any time by turning tracking off in iOS Settings or usage stats off in the game.</p>
+
+<h2>Children</h2>
+<p>{n} is made for a general audience and is not directed at children under 13. We do not knowingly collect personal
+information from children. If you believe a child has provided personal information to us, contact us at
+<a href="mailto:{EMAIL}">{EMAIL}</a> and we will delete it.</p>
+
+<h2>Your rights</h2>
+<p>Depending on where you live (for example under the GDPR, UK GDPR, CCPA/CPRA or India's DPDP Act) you may have the right to
+access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. Switch usage
+stats off in <b>Settings &rarr; Share usage stats</b>, change ad choices in <b>Settings &rarr; Privacy Choices</b> (EEA, UK,
+Switzerland) or tracking in iOS Settings, or delete the game. We don't know who you are: analytics data is tied to a random
+app-instance identifier, not to a name or account. To ask Google to delete it, email us the approximate date you played and
+your device model and we will request deletion of that app instance. Email <a href="mailto:{EMAIL}">{EMAIL}</a>; we answer
+within 30 days. You may also complain to your local data-protection authority.</p>
+
+<h2>Changes</h2>
+<p>If a future version changes how information is handled, we will update this page and the date above before that version
+is released.</p>
+
+<h2>Contact</h2>
+<p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+"""
+    page(f"{g['slug']}/privacy.html", f"{g['name']} Privacy Policy", body, g)
+
+
+def if_terms(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} &mdash; Terms of Use</h1>
+<p class="meta">Last updated: {IF_UPDATED}</p>
+<p>These terms apply to the game <b>{n}</b> published by {DEVELOPER}. Apple's
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License
+Agreement</a> (EULA) also applies; if anything here conflicts with it, Apple's agreement wins.</p>
+<h2>Licence</h2>
+<p>We give you a personal, non-transferable, revocable licence to play the game for non-commercial purposes. Do not copy,
+modify, reverse engineer, resell or exploit the game.</p>
+<h2>Price, ads and purchases</h2>
+<p>The game is free and shows ads. It offers optional in-app purchases (bundles, coin packs, Safety Net, No Ads and the No
+Ads Bundle), processed by Apple under the App Store's terms. No Ads removes the full-screen ads and the banner for good;
+reward videos stay optional. Coins and tools have no cash value, cannot be sold or exchanged for money and do not expire.
+Restore Purchases is in the Shop, in Settings and on the Atlas Club screen.</p>
+<h2>Atlas Club subscription</h2>
+<ul>
+<li><b>What you get:</b> no ads of any kind, a new members' picture page every day, a daily gift (coins, a Lens and a
+Pencil) and every video reward without watching a video, for as long as the membership is active.</li>
+<li><b>Plans:</b> Atlas Club Monthly (1 month) and Atlas Club Yearly (1 year), at the price shown in the game and on the App
+Store for your country. The Yearly plan may include a 7-day free trial for eligible new subscribers.</li>
+<li><b>Billing and renewal:</b> payment is charged to your Apple Account when you confirm the purchase, or when a free trial
+ends. The subscription renews automatically for the same period and price unless it is cancelled at least 24 hours before
+the end of the current period; your account is charged for renewal within the 24 hours before the period ends.</li>
+<li><b>Cancelling:</b> manage or cancel any time in your Apple Account settings (Settings &rarr; your name &rarr;
+Subscriptions). Cancelling stops the next renewal; the membership stays active until the end of the period you paid for. If
+you cancel during a free trial, you are not charged.</li>
+<li><b>Refunds</b> are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+<li>If the benefits ever change, existing members keep at least the benefits above until their current period ends, and
+we update this page first.</li>
+</ul>
+<h2>Availability and changes</h2>
+<p>We may update the game or change its content. To the extent the law allows, the game is provided &ldquo;as is&rdquo; and we
+are not liable for indirect or consequential losses. Nothing in these terms limits rights you have under consumer-protection
+law.</p>
+<h2>Credits</h2>
+<p>Illustrations were made for the game with AI image tools and edited by us. Fonts: Space Grotesk and DM Sans (SIL Open Font
+License).</p>
+<h2>Privacy</h2>
+<p>See the <a href="/{g['slug']}/privacy.html">{n} Privacy Policy</a>.</p>
+<h2>Contact</h2>
+<p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+"""
+    page(f"{g['slug']}/terms.html", f"{g['name']} Terms of Use", body, g)
+
+
+def if_support(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} Support</h1>
+<p class="lead">Need help? Email <a href="mailto:{EMAIL}?subject=Inkflight%20support">{EMAIL}</a> or use <b>Settings &rarr;
+Contact Support</b> in the game. We usually reply within two working days. Please include your iPhone model and what
+happened.</p>
+<h2>Frequently asked questions</h2>
+<h3>How do I play?</h3>
+<p>Tap an arrow and it flies off the page in the direction it points. An arrow can't pass through another one, so free its
+way first. Three wrong taps and the page is lost. Clear every arrow to restore the picture underneath.</p>
+<h3>What do the tools do?</h3>
+<p><b>Pencil</b> shows an arrow that can leave now, <b>Eraser</b> removes one arrow, <b>Lens</b> lights up every free arrow
+for a moment and <b>Quill</b> undoes your last move. Arrows with a gold dot are mirrors: tap the dot to turn them around.</p>
+<h3>What is the Atlas Club?</h3>
+<p>An optional monthly or yearly membership: no ads at all, a new members' page every day, a daily gift and instant video
+rewards. The yearly plan may start with a 7-day free trial for new subscribers. Open it from the crown on the home screen,
+the Shop or Settings.</p>
+<h3>How do I cancel the Atlas Club?</h3>
+<p>On your iPhone open <b>Settings &rarr; your name &rarr; Subscriptions &rarr; Inkflight</b>, or tap <b>Manage
+subscription</b> on the Atlas Club screen. You keep the membership until the end of the period you paid for.</p>
+<h3>I bought something but don't have it.</h3>
+<p>Tap <b>Restore Purchases</b> in the Shop or in Settings, signed in with the same Apple Account. If it still doesn't
+appear, email us the date of the purchase.</p>
+<h3>Are there ads?</h3>
+<p>The game is free with ads: optional reward videos, a full-screen ad now and then between pages and a banner on later
+pages. <b>No Ads</b> turns off the full-screen ads and the banner for good; Atlas Club members see no ads at all.</p>
+<h3>Is my progress saved?</h3>
+<p>Yes, automatically, on your device. Deleting the game deletes the progress.</p>
+<h3>How do I get a refund?</h3>
+<p>Request it from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+<h3>Privacy</h3>
+<p>See the <a href="/{g['slug']}/privacy.html">Privacy Policy</a>. Switch anonymous usage stats off in <b>Settings &rarr; Share
+usage stats</b>.</p>
+"""
+    page(f"{g['slug']}/support.html", f"{g['name']} Support", body, g)
+
+
+
 games = [TUMBLEPALS, SPINANDCARVE]
 for g in games:
     # Spin & Carve's privacy page is hand-maintained (age bands, Firebase, ATT, LevelPlay): edit spinandcarve/privacy.html.
@@ -720,6 +936,7 @@ for g in games:
     terms(g); support(g); landing(g)
 nmt_privacy(NIGHTMARKET); nmt_terms(NIGHTMARKET); nmt_support(NIGHTMARKET); landing(NIGHTMARKET)
 fs_privacy(FAIRWAY); fs_terms(FAIRWAY); fs_support(FAIRWAY); landing(FAIRWAY)
+if_privacy(INKFLIGHT); if_terms(INKFLIGHT); if_support(INKFLIGHT); landing(INKFLIGHT)
 # index.html is hand-maintained (it also lists Ember Orchards, Party Royale, StoragePilot and NetScope); home() would drop them.
 # home(games + [NIGHTMARKET, FAIRWAY])
 # app-ads.txt: our AdMob line + the Unity LevelPlay / Unity Ads sellers (copy the list from Unity dashboard → Monetization → Settings → App-ads.txt)
