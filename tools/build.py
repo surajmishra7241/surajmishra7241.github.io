@@ -1063,7 +1063,7 @@ not expire. Restore Purchases is in the Shop and in Settings.</p>
 <h2>Mela Club subscription</h2>
 <ul>
 <li><b>What you get:</b> no ads between levels and no banner, a daily gift (200 coins, 1 Hint and 1 Express Bay), Hints and
-Express Bays without watching a video, and daily calendar gifts doubled without a video, for as long as the membership is
+Express Bays without watching a video, and double coins from the daily gift calendar without a video, for as long as the membership is
 active.</li>
 <li><b>Plans:</b> Mela Club Weekly (1 week), Mela Club Monthly (1 month) and Mela Club Yearly (1 year), at the price shown in
 the game and on the App Store for your country.</li>
@@ -1110,7 +1110,7 @@ with a few and get more from daily gifts and packs; when you run out, spend coin
 <p>Turn on <b>Settings &rarr; Route symbols</b>: every colour gets its own symbol on the ride's roof and on the riders' caps.</p>
 <h3>What is the Mela Club?</h3>
 <p>An optional weekly, monthly or yearly membership: no ads between levels and no banner, a daily gift (200 coins, a Hint and an
-Express Bay), Hints and Express Bays without videos, and doubled daily calendar gifts. Open it from the crown on the home
+Express Bay), Hints and Express Bays without videos, and double coins from the daily gift calendar without a video. Open it from the crown on the home
 screen or from the Shop.</p>
 <h3>How do I cancel the Mela Club?</h3>
 <p>On your iPhone open <b>Settings &rarr; your name &rarr; Subscriptions &rarr; {n}</b>. You keep the membership until the end
