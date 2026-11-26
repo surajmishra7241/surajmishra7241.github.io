@@ -952,7 +952,7 @@ Express Bays and route symbols for colour-blind play.</p>
 Hints and Express Bays without videos.</p>""",
     kids=False, products=[],
 )
-TK_UPDATED = "26 November 2026"
+TK_UPDATED = "27 November 2026"
 
 
 def tk_privacy(g):
@@ -965,15 +965,40 @@ on iPhone and iPad.</p>
 
 <div class="card"><b>In short:</b> the game is free. It shows ads (optional reward videos, a full-screen ad now and then
 between levels and a small banner on later levels), served through Unity LevelPlay by ironSource Ads and Unity Ads, and
-offers optional in-app purchases and an optional <b>Mela Club</b> subscription, all processed by Apple. There are no accounts,
-no analytics of our own and no server of ours: your progress stays on your device. Ads are <b>personalised only</b> if you
-allow tracking when Apple's prompt asks; in the EEA, UK and Switzerland ads are never personalised and the game does not ask.</div>
+offers optional in-app purchases and an optional <b>Mela Club</b> subscription, all processed by Apple. There are no accounts
+and no server of ours: your progress stays on your device. With usage stats on (the default; in the EEA, UK and Switzerland
+they stay off) gameplay statistics, not linked to your name or account, go to <b>Google Analytics for Firebase</b>; switch
+them off any time in
+<b>Settings &rarr; Usage stats</b>. Ads are <b>personalised only</b> if usage stats are on <b>and</b> you allow tracking when
+Apple's prompt asks; in the EEA, UK and Switzerland ads are never personalised and the game does not ask.</div>
 
 <h2>Information stored on your device</h2>
 <p>Your progress (levels won, coins, Hints, Express Bays, daily gifts and missions), items you bought, your membership status,
 when you last saw an ad (so the game can space ads out) and your settings are saved in the game's own storage on your device.
 They are not sent to us. Deleting the game deletes them; Remove Ads and an active Mela Club come back with <b>Restore
 Purchases</b>.</p>
+
+<h2>Analytics (Google Analytics for Firebase)</h2>
+<p>To see how the game is played, improve it and measure our own advertising, the game uses Google Analytics for Firebase,
+provided by Google. When usage stats are on it receives:</p>
+<ul>
+<li>an app-instance identifier created by Firebase and the identifier for vendors (IDFV), not your name, email or Apple ID;</li>
+<li>device and app information: device model, iOS version, app version, language, country/region (derived from your IP
+address, which Google does not store as such), first-open and session times;</li>
+<li>game events, for example: levels started, won and lost, Hints and Express Bays used, the home screen and Shop opened,
+daily gifts and missions claimed, purchases and subscriptions (product and price), reward videos watched, ads shown and their
+estimated value, and your answer to Apple's tracking prompt.</li>
+</ul>
+<p>Google processes this under its own policy:
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its
+services</a>, and keeps detailed event data for 2 months (reports use aggregated counts).</p>
+<ul>
+<li><b>EEA, UK and Switzerland:</b> nothing is collected unless you agree on Google's consent form; while the game does not
+show that form, nothing is collected there at all. The game treats you as there if your device's region is set to one of
+these countries.</li>
+<li><b>Everywhere:</b> turn it off any time in <b>Settings &rarr; Usage stats</b>. Stats then stop, ads are no longer
+personalised and the game does not ask for tracking.</li>
+</ul>
 
 <h2>Advertising</h2>
 <p>The game shows optional reward videos you choose to watch (an Express Bay, a Hint, double coins after a win, free coins in
@@ -988,12 +1013,14 @@ for quality and safety. To deliver and measure ads and prevent fraud, these ad p
 address (and the approximate location derived from it), device and operating-system information, the identifier for vendors
 (IDFV), ad interactions (for example, whether an ad was shown or tapped) and diagnostics. Unity processes this under its own
 policy: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Game Player and App User Privacy
-Policy</a>.</p>
+Policy</a>. When usage stats are on, the game also sends the estimated value of each ad shown (no personal data) to Google
+Analytics for Firebase.</p>
 <ul>
-<li><b>Tracking.</b> After your first few levels the game shows a short note and then Apple's App Tracking Transparency
-prompt, once. Only if you choose <b>Allow</b> do the ad partners receive your device's advertising identifier (IDFA) and may
-ads be personalised to your interests. Either answer leaves the game the same, with the same number of ads; change it any
-time in iOS <b>Settings &rarr; Privacy &amp; Security &rarr; Tracking</b>.</li>
+<li><b>Tracking.</b> If usage stats are on, after your first few levels the game shows a short note and then Apple's App
+Tracking Transparency prompt, once. Only if you choose <b>Allow</b> do the ad partners receive your device's advertising
+identifier (IDFA), may ads be personalised to your interests, and may Google Analytics share statistics with Google's
+advertising services to measure which of our ads brought you to the game. Either answer leaves the game the same, with the
+same number of ads; change it any time in iOS <b>Settings &rarr; Privacy &amp; Security &rarr; Tracking</b>.</li>
 <li><b>EEA, UK and Switzerland:</b> only non-personalised ads are requested and the game does not ask for tracking. The game
 treats you as there if your device's region is set to one of these countries.</li>
 <li><b>US privacy laws:</b> unless you allow tracking, the game tells the ad partners not to sell or share your
@@ -1004,7 +1031,8 @@ information.</li>
 <p>Purchases (the Starter Pack, the Rush Hour Pack, coin packs and Remove Ads) and the <b>Mela Club</b> subscription are
 processed by Apple. We never receive your name, Apple ID or payment details. The App Store tells the game which items and
 which membership your Apple ID owns, with product and transaction identifiers and dates, so they can be delivered, renewed
-and restored; this stays on your device. You manage or cancel the subscription in your Apple Account settings.</p>
+and restored; this stays on your device. With usage stats on, a new purchase's product, price and transaction identifier also
+go to Google Analytics for Firebase (see above). You manage or cancel the subscription in your Apple Account settings.</p>
 
 <h2>Apple services</h2>
 <p>The game may ask Apple to show its standard &ldquo;rate this app&rdquo; prompt after a couple of good wins. That prompt is
@@ -1017,9 +1045,9 @@ anything you write, use it only to answer you and delete the thread within 12 mo
 
 <h2>Information we do not collect</h2>
 <p>We do not collect your name, email address (unless you write to us), phone number, contacts, photos, precise location,
-health data or browsing history. The game has no analytics of its own, and we do not sell personal information. If you allow
-tracking, our ad partners may use your advertising identifier for personalised ads, which some US state laws treat as
-&ldquo;sharing&rdquo; for cross-context behavioural advertising; stop this any time by turning tracking off in iOS Settings.</p>
+health data or browsing history, and we do not sell personal information. If you allow tracking, our ad partners may use
+your advertising identifier for personalised ads, which some US state laws treat as &ldquo;sharing&rdquo; for cross-context
+behavioural advertising; stop this any time by turning tracking off in iOS Settings or usage stats off in the game.</p>
 
 <h2>Children</h2>
 <p>{n} is made for a general audience and is not directed at children under 13. We do not knowingly collect personal
@@ -1028,11 +1056,13 @@ information from children. If you believe a child has provided personal informat
 
 <h2>Your rights</h2>
 <p>Depending on where you live (for example under the GDPR, UK GDPR, CCPA/CPRA or India's DPDP Act) you may have the right to
-access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. We hold no
-personal information about you unless you email us: the game has no account and sends nothing to us. You can turn tracking
-off or reset your advertising identifier in iOS Settings, or delete the game. For information the ad partners hold, use the
-choices in Unity's policy linked above, or email <a href="mailto:{EMAIL}">{EMAIL}</a> and we will help; we answer within 30
-days. You may also complain to your local data-protection authority.</p>
+access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. Switch usage
+stats off in <b>Settings &rarr; Usage stats</b>, turn tracking off or reset your advertising identifier in iOS Settings, or
+delete the game. We don't know who you are: the game has no account, and analytics data is tied to a random app-instance
+identifier, not to a name or account. To ask Google to delete it, email us the approximate date you played and your device
+model and we will request deletion of that app instance. For information the ad partners hold, use the choices in Unity's
+policy linked above, or email <a href="mailto:{EMAIL}">{EMAIL}</a> and we will help; we answer within 30 days. You may also
+complain to your local data-protection authority.</p>
 
 <h2>Changes</h2>
 <p>If a future version changes how information is handled, we will update this page and the date above before that version
@@ -1127,6 +1157,9 @@ either.</p>
 active Mela Club come back with <b>Restore Purchases</b>.</p>
 <h3>How do I get a refund?</h3>
 <p>Request it from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+<h3>How do I turn usage stats off?</h3>
+<p>Open <b>Settings &rarr; Usage stats</b> in the game and switch it off. The game then sends no gameplay statistics to Google
+Analytics for Firebase and ads are not personalised. In the EEA, UK and Switzerland usage stats are off already.</p>
 <h3>Privacy</h3>
 <p>See the <a href="/{g['slug']}/privacy.html">Privacy Policy</a>.</p>
 """
