@@ -941,15 +941,209 @@ usage stats</b>.</p>
     page(f"{g['slug']}/support.html", f"{g['name']} Support", body, g)
 
 
+TUKTUK = dict(
+    slug="tuktuk-tangle", name="TukTuk Tangle",
+    tagline="Untangle the mela traffic jam: free the rides, fill them with riders, clear the lot.",
+    about="""<p>The ride stand at Mela Mile is jammed. Tap a tuk-tuk, van or bus whose way out is clear and it drives to a
+pickup bay, where riders in its colour hop aboard; full rides head home. Pick the right order so the bays never fill up.
+100 hand-checked levels, from a small station square to giant picture-shaped lots, with friends who ride together, Hints,
+Express Bays and route symbols for colour-blind play.</p>
+<p><b>Free to play. No account. Plays offline.</b> Optional Mela Club membership: no ads between levels, a daily gift, and
+Hints and Express Bays without videos.</p>""",
+    kids=False, products=[],
+)
+TK_UPDATED = "26 November 2026"
+
+
+def tk_privacy(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} &mdash; Privacy Policy</h1>
+<p class="meta">Last updated: {TK_UPDATED}</p>
+<p>This policy covers the game <b>{n}</b> (&ldquo;the game&rdquo;), published by {DEVELOPER} (&ldquo;we&rdquo;, &ldquo;us&rdquo;),
+on iPhone and iPad.</p>
+
+<div class="card"><b>In short:</b> the game is free. It shows ads (optional reward videos, a full-screen ad now and then
+between levels and a small banner on later levels), served through Unity LevelPlay by ironSource Ads and Unity Ads, and
+offers optional in-app purchases and an optional <b>Mela Club</b> subscription, all processed by Apple. There are no accounts,
+no analytics of our own and no server of ours: your progress stays on your device. Ads are <b>personalised only</b> if you
+allow tracking when Apple's prompt asks; in the EEA, UK and Switzerland ads are never personalised and the game does not ask.</div>
+
+<h2>Information stored on your device</h2>
+<p>Your progress (levels won, coins, Hints, Express Bays, daily gifts and missions), items you bought, your membership status,
+when you last saw an ad (so the game can space ads out) and your settings are saved in the game's own storage on your device.
+They are not sent to us. Deleting the game deletes them; Remove Ads and an active Mela Club come back with <b>Restore
+Purchases</b>.</p>
+
+<h2>Advertising</h2>
+<p>The game shows optional reward videos you choose to watch (an Express Bay, a Hint, double coins after a win, free coins in
+the Shop or a bigger daily gift), a full-screen ad now and then after you win a level (never while you are playing a level,
+never after a lost level, not in the first ten levels or your first minutes of play, and at most one every 90 seconds), and a
+small banner at the bottom of the play screen from level 20. <b>Remove Ads</b> turns the full-screen ads and the banner off for
+good; <b>Mela Club</b> members see neither and get video rewards without watching a video. Ad requests are not marked as
+directed at children.</p>
+<p>Ads are served through <b>Unity LevelPlay</b>, an ad mediation service of Unity Technologies (ironSource), which picks
+each ad from <b>ironSource Ads and Unity Ads</b>; LevelPlay includes Unity's Ad Quality component, which checks the ads shown
+for quality and safety. To deliver and measure ads and prevent fraud, these ad partners may collect from your device: IP
+address (and the approximate location derived from it), device and operating-system information, the identifier for vendors
+(IDFV), ad interactions (for example, whether an ad was shown or tapped) and diagnostics. Unity processes this under its own
+policy: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Game Player and App User Privacy
+Policy</a>.</p>
+<ul>
+<li><b>Tracking.</b> After your first few levels the game shows a short note and then Apple's App Tracking Transparency
+prompt, once. Only if you choose <b>Allow</b> do the ad partners receive your device's advertising identifier (IDFA) and may
+ads be personalised to your interests. Either answer leaves the game the same, with the same number of ads; change it any
+time in iOS <b>Settings &rarr; Privacy &amp; Security &rarr; Tracking</b>.</li>
+<li><b>EEA, UK and Switzerland:</b> only non-personalised ads are requested and the game does not ask for tracking. The game
+treats you as there if your device's region is set to one of these countries.</li>
+<li><b>US privacy laws:</b> unless you allow tracking, the game tells the ad partners not to sell or share your
+information.</li>
+</ul>
+
+<h2>Purchases and the Mela Club subscription</h2>
+<p>Purchases (the Starter Pack, the Rush Hour Pack, coin packs and Remove Ads) and the <b>Mela Club</b> subscription are
+processed by Apple. We never receive your name, Apple ID or payment details. The App Store tells the game which items and
+which membership your Apple ID owns, with product and transaction identifiers and dates, so they can be delivered, renewed
+and restored; this stays on your device. You manage or cancel the subscription in your Apple Account settings.</p>
+
+<h2>Apple services</h2>
+<p>The game may ask Apple to show its standard &ldquo;rate this app&rdquo; prompt after a couple of good wins. That prompt is
+run by Apple; we receive no information from it. Apple may give us anonymous, aggregated download, sales and crash statistics
+through App Store Connect if you have chosen to share them with developers.</p>
+
+<h2>Contacting us</h2>
+<p><b>Settings &rarr; Support</b> in the game opens our support page. If you email us, we receive your email address and
+anything you write, use it only to answer you and delete the thread within 12 months.</p>
+
+<h2>Information we do not collect</h2>
+<p>We do not collect your name, email address (unless you write to us), phone number, contacts, photos, precise location,
+health data or browsing history. The game has no analytics of its own, and we do not sell personal information. If you allow
+tracking, our ad partners may use your advertising identifier for personalised ads, which some US state laws treat as
+&ldquo;sharing&rdquo; for cross-context behavioural advertising; stop this any time by turning tracking off in iOS Settings.</p>
+
+<h2>Children</h2>
+<p>{n} is made for a general audience and is not directed at children under 13. We do not knowingly collect personal
+information from children. If you believe a child has provided personal information to us, contact us at
+<a href="mailto:{EMAIL}">{EMAIL}</a> and we will delete it.</p>
+
+<h2>Your rights</h2>
+<p>Depending on where you live (for example under the GDPR, UK GDPR, CCPA/CPRA or India's DPDP Act) you may have the right to
+access, correct or delete personal information, to object to or restrict processing, and to withdraw consent. We hold no
+personal information about you unless you email us: the game has no account and sends nothing to us. You can turn tracking
+off or reset your advertising identifier in iOS Settings, or delete the game. For information the ad partners hold, use the
+choices in Unity's policy linked above, or email <a href="mailto:{EMAIL}">{EMAIL}</a> and we will help; we answer within 30
+days. You may also complain to your local data-protection authority.</p>
+
+<h2>Changes</h2>
+<p>If a future version changes how information is handled, we will update this page and the date above before that version
+is released.</p>
+
+<h2>Contact</h2>
+<p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+"""
+    page(f"{g['slug']}/privacy.html", f"{g['name']} Privacy Policy", body, g)
+
+
+def tk_terms(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} &mdash; Terms of Use</h1>
+<p class="meta">Last updated: {TK_UPDATED}</p>
+<p>These terms apply to the game <b>{n}</b> published by {DEVELOPER}. Apple's
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License
+Agreement</a> (EULA) also applies; if anything here conflicts with it, Apple's agreement wins.</p>
+<h2>Licence</h2>
+<p>We give you a personal, non-transferable, revocable licence to play the game for non-commercial purposes. Do not copy,
+modify, reverse engineer, resell or exploit the game.</p>
+<h2>Price, ads and purchases</h2>
+<p>The game is free and shows ads. It offers optional in-app purchases (the Starter Pack, the Rush Hour Pack, coin packs and
+Remove Ads), processed by Apple under the App Store's terms. Remove Ads removes the full-screen ads and the banner for good;
+reward videos stay optional. Coins, Hints and Express Bays have no cash value, cannot be sold or exchanged for money and do
+not expire. Restore Purchases is in the Shop and in Settings.</p>
+<h2>Mela Club subscription</h2>
+<ul>
+<li><b>What you get:</b> no ads between levels and no banner, a daily gift (200 coins, 1 Hint and 1 Express Bay), Hints and
+Express Bays without watching a video, and daily calendar gifts doubled without a video, for as long as the membership is
+active.</li>
+<li><b>Plans:</b> Mela Club Weekly (1 week), Mela Club Monthly (1 month) and Mela Club Yearly (1 year), at the price shown in
+the game and on the App Store for your country.</li>
+<li><b>Billing and renewal:</b> payment is charged to your Apple Account when you confirm the purchase. The subscription
+renews automatically for the same period and price unless it is cancelled at least 24 hours before the end of the current
+period; your account is charged for renewal within the 24 hours before the period ends.</li>
+<li><b>Cancelling:</b> manage or cancel any time in your Apple Account settings (Settings &rarr; your name &rarr;
+Subscriptions). Cancelling stops the next renewal; the membership stays active until the end of the period you paid
+for.</li>
+<li><b>Refunds</b> are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+<li>If the benefits ever change, existing members keep at least the benefits above until their current period ends, and
+we update this page first.</li>
+</ul>
+<h2>Availability and changes</h2>
+<p>We may update the game or change its content. To the extent the law allows, the game is provided &ldquo;as is&rdquo; and we
+are not liable for indirect or consequential losses. Nothing in these terms limits rights you have under consumer-protection
+law.</p>
+<h2>Credits</h2>
+<p>The 3D models, music and sound effects were made by us for the game. The logo, app icon and interface icons were made with
+AI image tools and edited by us. Fonts: Lilita One and Nunito (SIL Open Font License).</p>
+<h2>Privacy</h2>
+<p>See the <a href="/{g['slug']}/privacy.html">{n} Privacy Policy</a>.</p>
+<h2>Contact</h2>
+<p>{DEVELOPER} &mdash; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+"""
+    page(f"{g['slug']}/terms.html", f"{g['name']} Terms of Use", body, g)
+
+
+def tk_support(g):
+    n = escape(g["name"])
+    body = f"""
+<h1>{n} Support</h1>
+<p class="lead">Need help? Email <a href="mailto:{EMAIL}?subject=TukTuk%20Tangle%20support">{EMAIL}</a>. We usually reply
+within two working days. Please include your iPhone or iPad model, the level number and what happened.</p>
+<h2>Frequently asked questions</h2>
+<h3>How do I play?</h3>
+<p>Tap a ride whose way out is clear: it drives out of the lot to a free pickup bay, and riders in its colour climb aboard in
+queue order. A full ride heads home. Friends wearing marigold garlands ride together and need two seats in the same ride. If
+every bay is taken and the rider at the front can't board, the level is lost, so plan the order.</p>
+<h3>What do Hints and Express Bays do?</h3>
+<p>A <b>Hint</b> shows a ride that is safe to tap now. An <b>Express Bay</b> opens an extra pickup bay for the level. You start
+with a few and get more from daily gifts and packs; when you run out, spend coins or watch a short video for one.</p>
+<h3>I can't tell some colours apart.</h3>
+<p>Turn on <b>Settings &rarr; Route symbols</b>: every colour gets its own symbol on the ride's roof and on the riders' caps.</p>
+<h3>What is the Mela Club?</h3>
+<p>An optional weekly, monthly or yearly membership: no ads between levels and no banner, a daily gift (200 coins, a Hint and an
+Express Bay), Hints and Express Bays without videos, and doubled daily calendar gifts. Open it from the crown on the home
+screen or from the Shop.</p>
+<h3>How do I cancel the Mela Club?</h3>
+<p>On your iPhone open <b>Settings &rarr; your name &rarr; Subscriptions &rarr; {n}</b>. You keep the membership until the end
+of the period you paid for.</p>
+<h3>I bought something but don't have it.</h3>
+<p>Tap <b>Restore Purchases</b> in the Shop or in Settings, signed in with the same Apple Account. If it still doesn't
+appear, email us the date of the purchase.</p>
+<h3>Are there ads?</h3>
+<p>The game is free with ads: optional reward videos, a full-screen ad now and then between levels from level 11 and a banner
+from level 20. <b>Remove Ads</b> turns off the full-screen ads and the banner for good; Mela Club members don't see them
+either.</p>
+<h3>Is my progress saved?</h3>
+<p>Yes, automatically, on your device. It is not stored online, so deleting the game deletes your progress. Remove Ads and an
+active Mela Club come back with <b>Restore Purchases</b>.</p>
+<h3>How do I get a refund?</h3>
+<p>Request it from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+<h3>Privacy</h3>
+<p>See the <a href="/{g['slug']}/privacy.html">Privacy Policy</a>.</p>
+"""
+    page(f"{g['slug']}/support.html", f"{g['name']} Support", body, g)
+
+
 
 games = [TUMBLEPALS, SPINANDCARVE]
 for g in games:
-    # Spin & Carve's privacy page is hand-maintained (age bands, Firebase, ATT, LevelPlay): edit spinandcarve/privacy.html.
-    if g is not SPINANDCARVE: privacy(g)
-    terms(g); support(g); landing(g)
+    # Spin & Carve's pages are hand-maintained (privacy: age bands, Firebase, ATT, LevelPlay; terms + support updated
+    # 20 Nov 2026 for 1.3.0): edit spinandcarve/*.html. Regenerating them here would roll them back to October's text.
+    if g is SPINANDCARVE: continue
+    privacy(g); terms(g); support(g); landing(g)
 nmt_privacy(NIGHTMARKET); nmt_terms(NIGHTMARKET); nmt_support(NIGHTMARKET); landing(NIGHTMARKET)
 fs_privacy(FAIRWAY); fs_terms(FAIRWAY); fs_support(FAIRWAY); landing(FAIRWAY)
 if_privacy(INKFLIGHT); if_terms(INKFLIGHT); if_support(INKFLIGHT); landing(INKFLIGHT)
+tk_privacy(TUKTUK); tk_terms(TUKTUK); tk_support(TUKTUK); landing(TUKTUK)
 # index.html is hand-maintained (it also lists Ember Orchards, Party Royale, StoragePilot and NetScope); home() would drop them.
 # home(games + [NIGHTMARKET, FAIRWAY])
 # app-ads.txt: our AdMob line + the Unity LevelPlay / Unity Ads sellers (copy the list from Unity dashboard → Monetization → Settings → App-ads.txt)
